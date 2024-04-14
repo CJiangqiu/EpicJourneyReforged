@@ -1,0 +1,328 @@
+{
+  "mod_elements": [
+    {
+      "name": "Scroll",
+      "type": "item",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scroll",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ejr/models/item/scroll.json",
+          "src/main/java/net/ejr/item/ScrollItem.java"
+        ]
+      }
+    },
+    {
+      "name": "EpicJourneyReforged",
+      "type": "tab",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "epic_journey_reforged",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "CopperCoin",
+      "type": "item",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copper_coin",
+      "metadata": {
+        "files": [
+          "src/main/java/net/ejr/item/CopperCoinItem.java",
+          "src/main/resources/assets/ejr/models/item/copper_coin.json"
+        ]
+      }
+    },
+    {
+      "name": "SilverCoin",
+      "type": "item",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silver_coin",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ejr/models/item/silver_coin.json",
+          "src/main/java/net/ejr/item/SilverCoinItem.java"
+        ]
+      }
+    },
+    {
+      "name": "GoldCoin",
+      "type": "item",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gold_coin",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ejr/models/item/gold_coin.json",
+          "src/main/java/net/ejr/item/GoldCoinItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Purse",
+      "type": "item",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purse",
+      "metadata": {
+        "files": [
+          "src/main/java/net/ejr/item/PurseItem.java",
+          "src/main/resources/assets/ejr/models/item/purse.json"
+        ]
+      }
+    },
+    {
+      "name": "PurseRecipe",
+      "type": "recipe",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purse_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ejr/recipes/purse_recipe.json"
+        ]
+      }
+    },
+    {
+      "name": "SteelSword",
+      "type": "tool",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_sword",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ejr/models/item/steel_sword.json",
+          "src/main/java/net/ejr/item/SteelSwordItem.java"
+        ]
+      }
+    },
+    {
+      "name": "SteelAxe",
+      "type": "tool",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_axe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/ejr/item/SteelAxeItem.java",
+          "src/main/resources/assets/ejr/models/item/steel_axe.json"
+        ]
+      }
+    },
+    {
+      "name": "SteelPickaxe",
+      "type": "tool",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_pickaxe",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ejr/models/item/steel_pickaxe.json",
+          "src/main/java/net/ejr/item/SteelPickaxeItem.java"
+        ]
+      }
+    },
+    {
+      "name": "SteelShovel",
+      "type": "tool",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_shovel",
+      "metadata": {
+        "files": [
+          "src/main/java/net/ejr/item/SteelShovelItem.java",
+          "src/main/resources/assets/ejr/models/item/steel_shovel.json"
+        ]
+      }
+    },
+    {
+      "name": "SteelHoe",
+      "type": "tool",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_hoe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/ejr/item/SteelHoeItem.java",
+          "src/main/resources/assets/ejr/models/item/steel_hoe.json"
+        ]
+      }
+    },
+    {
+      "name": "SteelSwordRecipe",
+      "type": "recipe",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_sword_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ejr/recipes/steel_sword_recipe.json"
+        ]
+      }
+    },
+    {
+      "name": "SteelAxeRecipe",
+      "type": "recipe",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_axe_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ejr/recipes/steel_axe_recipe.json"
+        ]
+      }
+    },
+    {
+      "name": "SteelPickaxeRecipe",
+      "type": "recipe",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_pickaxe_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ejr/recipes/steel_pickaxe_recipe.json"
+        ]
+      }
+    },
+    {
+      "name": "SteelShovelRecipe",
+      "type": "recipe",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_shovel_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ejr/recipes/steel_shovel_recipe.json"
+        ]
+      }
+    },
+    {
+      "name": "SteelHoeRecipe",
+      "type": "recipe",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_hoe_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ejr/recipes/steel_hoe_recipe.json"
+        ]
+      }
+    },
+    {
+      "name": "SteelBow",
+      "type": "item",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_bow",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ejr/models/item/steel_bow.json",
+          "src/main/java/net/ejr/item/SteelBowItem.java"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "tag_elements": {
+    "BIOMES:minecraft:is_savanna": [],
+    "DAMAGE_TYPES:minecraft:bypasses_shield": [],
+    "DAMAGE_TYPES:minecraft:bypasses_effects": [],
+    "ENTITIES:minecraft:impact_projectiles": [],
+    "ITEMS:minecraft:flowers": [],
+    "BLOCKS:minecraft:beacon_base_blocks": [],
+    "BLOCKS:minecraft:climbable": [],
+    "BIOMES:minecraft:is_end": [],
+    "ENTITIES:minecraft:skeletons": [],
+    "ITEMS:minecraft:small_flowers": [],
+    "BIOMES:minecraft:is_ocean": [],
+    "BLOCKS:minecraft:logs": [],
+    "BLOCKS:minecraft:wither_immune": [],
+    "ENTITIES:minecraft:powder_snow_walkable_mobs": [],
+    "DAMAGE_TYPES:minecraft:bypasses_enchantments": [],
+    "BIOMES:minecraft:is_river": [],
+    "BIOMES:minecraft:is_overworld": [],
+    "BLOCKS:minecraft:bee_growables": [],
+    "BIOMES:minecraft:is_forest": [],
+    "BLOCKS:minecraft:tall_flowers": [],
+    "BIOMES:minecraft:is_mountain": [],
+    "DAMAGE_TYPES:minecraft:bypasses_armor": [],
+    "BLOCKS:minecraft:dirt": [],
+    "BLOCKS:minecraft:dragon_immune": [],
+    "BIOMES:minecraft:is_hill": [],
+    "BLOCKS:minecraft:small_flowers": [],
+    "DAMAGE_TYPES:minecraft:bypasses_cooldown": [],
+    "BIOMES:minecraft:is_nether": [],
+    "ITEMS:forge:ingots/steel": [],
+    "ENTITIES:minecraft:arrows": [],
+    "ITEMS:minecraft:arrows": [],
+    "ENTITIES:minecraft:raiders": [],
+    "ITEMS:minecraft:planks": []
+  },
+  "language_map": {
+    "en_us": {
+      "item.ejr.steel_axe": "Steel Axe",
+      "item.ejr.purse": "Purse",
+      "item.ejr.silver_coin": "Silver Coin",
+      "item.ejr.steel_bow": "Steel Bow",
+      "item.ejr.copper_coin": "Copper Coin",
+      "item.ejr.scroll": "Scroll",
+      "item_group.ejr.epic_journey_reforged": "Epic Journey",
+      "item.ejr.gold_coin": "Gold Coin",
+      "item.ejr.steel_hoe": "Steel Hoe",
+      "item.ejr.steel_pickaxe": "Steel Pickaxe",
+      "item.ejr.steel_sword": "Steel Sword",
+      "item.ejr.steel_shovel": "Steel Shovel"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "ejr",
+    "modName": "Epic Journey:Reforged",
+    "version": "0.0.1",
+    "description": "An epic journey in another world.",
+    "author": "CJiangqiu",
+    "license": "Mozilla Public License 2.0",
+    "serverSideOnly": false,
+    "modPicture": "epicjourneyreforged",
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "curios_api",
+      "jade",
+      "patchouli",
+      "playeranimator",
+      "jei"
+    ],
+    "currentGenerator": "forge-1.20.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.ejr"
+  },
+  "mcreatorVersion": 202400115821
+}

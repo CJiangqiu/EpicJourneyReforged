@@ -1,0 +1,9 @@
+{
+  "required": true,
+  "package": "net.ejr.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "mixins.ejr.refmap.json",
+  "mixins": [],
+  "client": [],
+  "minVersion": "0.8"
+}
