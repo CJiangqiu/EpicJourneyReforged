@@ -1,0 +1,15 @@
+{
+  "parent": "ejr:custom/steel_shield",
+  "textures": {
+    "0": "ejr:block/steel_shield",
+    "particle": "ejr:item/steel_shield"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1
+      },
+      "model": "ejr:item/steel_shield_0"
+    }
+  ]
+}

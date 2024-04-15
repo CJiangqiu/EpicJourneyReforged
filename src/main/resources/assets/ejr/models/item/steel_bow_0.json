@@ -1,34 +1,8 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ejr:item/steel_bow"
+    "layer0": "ejr:item/steel_bow_pulling_0"
   },
-  "overrides": [
-    {
-      "predicate": {
-        "ejr:steel_bow_pulling": 1
-      },
-      "model": "ejr:item/steel_bow_0"
-    },
-    {
-      "predicate": {
-        "ejr:steel_bow_pulling": 2
-      },
-      "model": "ejr:item/steel_bow_1"
-    },
-    {
-      "predicate": {
-        "ejr:steel_bow_pulling": 3
-      },
-      "model": "ejr:item/steel_bow_2"
-    },
-    {
-      "predicate": {
-        "ejr:steel_bow_pulling": 4
-      },
-      "model": "ejr:item/steel_bow_3"
-    }
-  ],
   "display": {
     "thirdperson_righthand": {
       "rotation": [

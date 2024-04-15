@@ -1,0 +1,29 @@
+{
+  "parent": "ejr:custom/steel_shield",
+  "textures": {
+    "0": "ejr:block/steel_shield",
+    "particle": "ejr:item/steel_shield"
+  },
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [ -60, 0, 60 ],
+      "translation": [ 5, -5, 10 ],
+      "scale": [ 1.0, 1.0, 1.0 ]
+    },
+    "firstperson_righthand": {
+      "rotation": [ 90, 10, -90 ],
+      "translation": [ -6.75, -8, 7 ],
+      "scale": [ 1.25, 1.25, 1.25 ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [ 120, 0, 120 ],
+      "translation": [ 5, -5, 10 ],
+      "scale": [ 1.0, 1.0, 1.0 ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [ 90, 10, 90 ],
+      "translation": [ 8, -5, 7 ],
+      "scale": [ 1.25, 1.25, 1.25 ]
+    }
+  }
+}

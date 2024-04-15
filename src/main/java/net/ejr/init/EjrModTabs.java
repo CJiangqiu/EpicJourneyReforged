@@ -29,5 +29,6 @@ public class EjrModTabs {
 				tabData.accept(EjrModItems.STEEL_SHOVEL.get());
 				tabData.accept(EjrModItems.STEEL_HOE.get());
 				tabData.accept(EjrModItems.STEEL_BOW.get());
+				tabData.accept(EjrModItems.STEEL_SHIELD.get());
 			}).withSearchBar().build());
 }

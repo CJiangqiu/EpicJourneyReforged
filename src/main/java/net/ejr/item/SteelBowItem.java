@@ -37,7 +37,7 @@ public class SteelBowItem extends Item {
 
 	@Override
 	public int getUseDuration(ItemStack itemstack) {
-		return 4;
+		return 40;
 	}
 
 	@Override

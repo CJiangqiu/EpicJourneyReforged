@@ -5,10 +5,11 @@
   "item.ejr.steel_bow": "Steel Bow",
   "item.ejr.copper_coin": "Copper Coin",
   "item.ejr.scroll": "Scroll",
-  "item_group.ejr.epic_journey_reforged": "Epic Journey",
+  "item_group.ejr.epic_journey_reforged": "§5Epic Journey",
   "item.ejr.gold_coin": "Gold Coin",
   "item.ejr.steel_hoe": "Steel Hoe",
   "item.ejr.steel_pickaxe": "Steel Pickaxe",
   "item.ejr.steel_sword": "Steel Sword",
-  "item.ejr.steel_shovel": "Steel Shovel"
+  "item.ejr.steel_shovel": "Steel Shovel",
+  "item.ejr.steel_shield": "Steel Shield"
 }
