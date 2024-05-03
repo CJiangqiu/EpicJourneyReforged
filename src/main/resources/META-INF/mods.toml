@@ -4,7 +4,7 @@ license="Mozilla Public License 2.0"
 
 [[mods]]
 modId="ejr"
-version="0.0.1"
+version="0.0.2"
 displayName="Epic Journey:Reforged"
 displayURL="https://mcreator.net"
 logoFile="logo.png"
@@ -37,6 +37,12 @@ description="An epic journey in another world."
     side="BOTH"
 [[dependencies.ejr]]
     modId="patchouli"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.ejr]]
+    modId="geckolib"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"

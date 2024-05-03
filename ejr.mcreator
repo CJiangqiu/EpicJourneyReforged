@@ -234,55 +234,12 @@
       "type": "item",
       "sortid": 18,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "steel_bow",
       "metadata": {
         "files": [
           "src/main/resources/assets/ejr/models/item/steel_bow.json",
-          "src/main/resources/assets/ejr/models/item/steel_bow_0.json",
-          "src/main/java/net/ejr/item/SteelBowItem.java",
-          "src/main/resources/assets/ejr/models/item/steel_bow_1.json",
-          "src/main/resources/assets/ejr/models/item/steel_bow_3.json",
-          "src/main/resources/assets/ejr/models/item/steel_bow_2.json"
-        ]
-      }
-    },
-    {
-      "name": "SteelBowPulling",
-      "type": "procedure",
-      "sortid": 19,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "steel_bow_pulling",
-      "metadata": {
-        "return_type": "number",
-        "files": [
-          "src/main/java/net/ejr/procedures/SteelBowPullingProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "SteelBowUsing",
-      "type": "procedure",
-      "sortid": 20,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "steel_bow_using",
-      "metadata": {
-        "files": [
-          "src/main/java/net/ejr/procedures/SteelBowUsingProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
+          "src/main/java/net/ejr/item/SteelBowItem.java"
         ]
       }
     },
@@ -326,75 +283,140 @@
           "src/main/resources/data/ejr/recipes/steel_shield_recipe.json"
         ]
       }
+    },
+    {
+      "name": "ClientProxy",
+      "type": "code",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "client_proxy",
+      "metadata": {
+        "files": [
+          "src/main/java/net/ejr/ClientProxy.java"
+        ]
+      }
+    },
+    {
+      "name": "FickForvoss",
+      "type": "biome",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fick_forvoss",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ejr/worldgen/biome/fick_forvoss.json",
+          "src/main/resources/data/ejr/worldgen/placed_feature/fick_forvoss_tree.json",
+          "src/main/java/net/ejr/world/features/treedecorators/FickForvossTrunkDecorator.java",
+          "src/main/resources/data/ejr/worldgen/configured_feature/fick_forvoss_tree.json",
+          "src/main/java/net/ejr/world/features/treedecorators/FickForvossLeaveDecorator.java",
+          "src/main/java/net/ejr/world/features/treedecorators/FickForvossFruitDecorator.java"
+        ]
+      }
+    },
+    {
+      "name": "TheLost",
+      "type": "animatedentity",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_lost",
+      "metadata": {
+        "files": [
+          "src/main/java/net/ejr/client/renderer/TheLostRenderer.java",
+          "src/main/java/net/ejr/entity/model/TheLostModel.java",
+          "src/main/resources/data/ejr/forge/biome_modifier/the_lost_biome_modifier.json",
+          "src/main/java/net/ejr/entity/TheLostEntity.java",
+          "src/main/resources/assets/ejr/models/item/the_lost_spawn_egg.json"
+        ]
+      }
     }
   ],
   "variable_elements": [],
-  "sound_elements": [],
+  "sound_elements": [
+    {
+      "name": "the_lost_live",
+      "files": [
+        "the_lost_live",
+        "the_lost_live_2"
+      ],
+      "category": "hostile",
+      "subtitle": "The Lost:Groan"
+    },
+    {
+      "name": "the_lost_hurt",
+      "files": [
+        "the_lost_hurt"
+      ],
+      "category": "hostile",
+      "subtitle": "The Lost:Hurt"
+    },
+    {
+      "name": "the_lost_death",
+      "files": [
+        "the_lost_death"
+      ],
+      "category": "hostile",
+      "subtitle": "The Lost:Death"
+    }
+  ],
   "tag_elements": {
-    "BIOMES:minecraft:is_savanna": [],
-    "DAMAGE_TYPES:minecraft:bypasses_shield": [],
-    "DAMAGE_TYPES:minecraft:bypasses_effects": [],
-    "ENTITIES:minecraft:impact_projectiles": [],
-    "ITEMS:minecraft:flowers": [],
-    "BLOCKS:minecraft:beacon_base_blocks": [],
-    "BLOCKS:minecraft:climbable": [],
-    "BIOMES:minecraft:is_end": [],
-    "ENTITIES:minecraft:skeletons": [],
-    "ITEMS:minecraft:small_flowers": [],
-    "BIOMES:minecraft:is_ocean": [],
-    "BLOCKS:minecraft:logs": [],
-    "BLOCKS:minecraft:wither_immune": [],
-    "ENTITIES:minecraft:powder_snow_walkable_mobs": [],
-    "DAMAGE_TYPES:minecraft:bypasses_enchantments": [],
-    "BIOMES:minecraft:is_river": [],
-    "BIOMES:minecraft:is_overworld": [],
-    "BLOCKS:minecraft:bee_growables": [],
-    "BIOMES:minecraft:is_forest": [],
-    "BLOCKS:minecraft:tall_flowers": [],
-    "BIOMES:minecraft:is_mountain": [],
-    "DAMAGE_TYPES:minecraft:bypasses_armor": [],
-    "BLOCKS:minecraft:dirt": [],
-    "BLOCKS:minecraft:dragon_immune": [],
-    "BIOMES:minecraft:is_hill": [],
-    "BLOCKS:minecraft:small_flowers": [],
-    "DAMAGE_TYPES:minecraft:bypasses_cooldown": [],
-    "BIOMES:minecraft:is_nether": [],
-    "ITEMS:forge:ingots/steel": [],
-    "ENTITIES:minecraft:arrows": [],
-    "ITEMS:minecraft:arrows": [],
-    "ENTITIES:minecraft:raiders": [],
-    "ITEMS:minecraft:planks": []
+    "BIOMES:minecraft:has_structure/buried_treasure": [
+      "~CUSTOM:FickForvoss"
+    ],
+    "BIOMES:minecraft:has_structure/mineshaft": [
+      "~CUSTOM:FickForvoss"
+    ],
+    "BIOMES:minecraft:has_structure/ruined_portal_standard": [
+      "~CUSTOM:FickForvoss"
+    ],
+    "ITEMS:forge:weapons/ranged_weapon": [
+      "CUSTOM:SteelBow"
+    ]
   },
   "language_map": {
     "en_us": {
       "item.ejr.steel_axe": "Steel Axe",
+      "entity.ejr.the_lost": "The Lost",
+      "item.ejr.the_lost_spawn_egg": "The Lost Spawn Egg",
       "item.ejr.purse": "Purse",
       "item.ejr.silver_coin": "Silver Coin",
       "item.ejr.steel_bow": "Steel Bow",
+      "biome.ejr.fick_forvoss": "Fick·Forvoss",
       "item.ejr.copper_coin": "Copper Coin",
       "item.ejr.scroll": "Scroll",
       "item_group.ejr.epic_journey_reforged": "§5Epic Journey",
+      "subtitles.the_lost_death": "The Lost:Death",
       "item.ejr.gold_coin": "Gold Coin",
       "item.ejr.steel_hoe": "Steel Hoe",
+      "subtitles.the_lost_hurt": "The Lost:Hurt",
       "item.ejr.steel_pickaxe": "Steel Pickaxe",
       "item.ejr.steel_sword": "Steel Sword",
       "item.ejr.steel_shovel": "Steel Shovel",
-      "item.ejr.steel_shield": "Steel Shield"
+      "item.ejr.steel_shield": "Steel Shield",
+      "subtitles.the_lost_live": "The Lost:Groan"
     },
     "zh_cn": {
       "item.ejr.steel_axe": "钢斧",
       "item.ejr.purse": "钱袋",
+      "item.ejr.the_lost_spawn_egg": "迷失者生成蛋",
+      "entity.ejr.the_lost": "迷失者",
       "item.ejr.silver_coin": "银币",
       "item.ejr.steel_bow": "钢弓",
+      "biome.ejr.fick_forvoss": "菲克·佛沃斯",
       "item.ejr.copper_coin": "铜币",
       "item.ejr.scroll": "卷轴",
       "item_group.ejr.epic_journey_reforged": "§5史诗征程",
+      "subtitles.the_lost_death": "迷失者：死亡",
       "item.ejr.gold_coin": "金币",
       "item.ejr.steel_hoe": "钢锄",
+      "subtitles.the_lost_hurt": "迷失者：受伤",
       "item.ejr.steel_pickaxe": "钢镐",
       "item.ejr.steel_sword": "钢剑",
       "item.ejr.steel_shovel": "钢锹",
-      "item.ejr.steel_shield": "钢盾"
+      "item.ejr.steel_shield": "钢盾",
+      "subtitles.the_lost_live": "迷失者：呻吟"
     }
   },
   "foldersRoot": {
@@ -404,9 +426,10 @@
   "workspaceSettings": {
     "modid": "ejr",
     "modName": "Epic Journey:Reforged",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "An epic journey in another world.",
     "author": "CJiangqiu",
+    "websiteURL": "https://mcreator.net",
     "license": "Mozilla Public License 2.0",
     "serverSideOnly": false,
     "modPicture": "epicjourneyreforged",
@@ -417,6 +440,7 @@
       "curios_api",
       "jade",
       "patchouli",
+      "geckolib",
       "playeranimator",
       "jei"
     ],
@@ -424,5 +448,5 @@
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.ejr"
   },
-  "mcreatorVersion": 202400115821
+  "mcreatorVersion": 202400117319
 }

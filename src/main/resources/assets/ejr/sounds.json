@@ -1,0 +1,33 @@
+{
+  "the_lost_live": {
+    "subtitle": "subtitles.the_lost_live",
+    "sounds": [
+      {
+        "name": "ejr:the_lost_live",
+        "stream": false
+      },
+      {
+        "name": "ejr:the_lost_live_2",
+        "stream": false
+      }
+    ]
+  },
+  "the_lost_hurt": {
+    "subtitle": "subtitles.the_lost_hurt",
+    "sounds": [
+      {
+        "name": "ejr:the_lost_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "the_lost_death": {
+    "subtitle": "subtitles.the_lost_death",
+    "sounds": [
+      {
+        "name": "ejr:the_lost_death",
+        "stream": false
+      }
+    ]
+  }
+}

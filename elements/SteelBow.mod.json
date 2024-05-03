@@ -5,77 +5,8 @@
     "renderType": 0,
     "texture": "steel_bow",
     "customModelName": "Ranged item",
-    "customProperties": {
-      "pulling": {
-        "name": "SteelBowPulling"
-      }
-    },
-    "states": [
-      {
-        "renderType": 0,
-        "texture": "steel_bow_pulling_0",
-        "customModelName": "Ranged item",
-        "stateMap": [
-          {
-            "property": {
-              "min": -1.7976931348623157E308,
-              "max": 1.7976931348623157E308,
-              "name": "CUSTOM:pulling",
-              "type": "number"
-            },
-            "value": 1.0
-          }
-        ]
-      },
-      {
-        "renderType": 0,
-        "texture": "steel_bow_pulling_1",
-        "customModelName": "Ranged item",
-        "stateMap": [
-          {
-            "property": {
-              "min": -1.7976931348623157E308,
-              "max": 1.7976931348623157E308,
-              "name": "CUSTOM:pulling",
-              "type": "number"
-            },
-            "value": 2.0
-          }
-        ]
-      },
-      {
-        "renderType": 0,
-        "texture": "steel_bow_pulling_2",
-        "customModelName": "Ranged item",
-        "stateMap": [
-          {
-            "property": {
-              "min": -1.7976931348623157E308,
-              "max": 1.7976931348623157E308,
-              "name": "CUSTOM:pulling",
-              "type": "number"
-            },
-            "value": 3.0
-          }
-        ]
-      },
-      {
-        "renderType": 0,
-        "texture": "steel_bow_pulling_2",
-        "customModelName": "Ranged item",
-        "stateMap": [
-          {
-            "property": {
-              "min": -1.7976931348623157E308,
-              "max": 1.7976931348623157E308,
-              "name": "CUSTOM:pulling",
-              "type": "number"
-            },
-            "value": 4.0
-          }
-        ]
-      }
-    ],
+    "customProperties": {},
+    "states": [],
     "name": "Steel Bow",
     "rarity": "COMMON",
     "creativeTab": {
@@ -83,7 +14,7 @@
     },
     "stackSize": 1,
     "enchantability": 14,
-    "useDuration": 40,
+    "useDuration": 60,
     "toolType": 1.0,
     "damageCount": 300,
     "recipeRemainder": {

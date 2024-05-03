@@ -1,7 +1,7 @@
 {
-  "parent": "item/generated",
+  "parent": "item/bow_pulling_1",
   "textures": {
-    "layer0": "ejr:item/steel_bow_pulling_2"
+    "layer0": "ejr:item/steel_bow_pulling_1"
   },
   "display": {
     "thirdperson_righthand": {

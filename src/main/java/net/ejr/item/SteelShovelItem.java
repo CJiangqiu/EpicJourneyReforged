@@ -20,7 +20,7 @@ public class SteelShovelItem extends ShovelItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 0.75f;
+				return 3f;
 			}
 
 			public int getLevel() {

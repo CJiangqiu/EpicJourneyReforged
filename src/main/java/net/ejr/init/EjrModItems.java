@@ -10,6 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.item.Items;
@@ -17,7 +18,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.item.ItemProperties;
 
-import net.ejr.procedures.SteelBowPullingProcedure;
 import net.ejr.item.SteelSwordItem;
 import net.ejr.item.SteelShovelItem;
 import net.ejr.item.SteelShieldItem;
@@ -47,13 +47,13 @@ public class EjrModItems {
 	public static final RegistryObject<Item> STEEL_HOE = REGISTRY.register("steel_hoe", () -> new SteelHoeItem());
 	public static final RegistryObject<Item> STEEL_BOW = REGISTRY.register("steel_bow", () -> new SteelBowItem());
 	public static final RegistryObject<Item> STEEL_SHIELD = REGISTRY.register("steel_shield", () -> new SteelShieldItem());
+	public static final RegistryObject<Item> THE_LOST_SPAWN_EGG = REGISTRY.register("the_lost_spawn_egg", () -> new ForgeSpawnEggItem(EjrModEntities.THE_LOST, -13421569, -16711936, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items
 	@SubscribeEvent
 	public static void clientLoad(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
-			ItemProperties.register(STEEL_BOW.get(), new ResourceLocation("ejr:steel_bow_pulling"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) SteelBowPullingProcedure.execute(entity));
 			ItemProperties.register(STEEL_SHIELD.get(), new ResourceLocation("blocking"), ItemProperties.getProperty(Items.SHIELD, new ResourceLocation("blocking")));
 		});
 	}
