@@ -29,5 +29,41 @@
         "stream": false
       }
     ]
+  },
+  "the_all_knowing_sage_live": {
+    "sounds": [
+      {
+        "name": "ejr:the_all_knowing_sage_live",
+        "stream": false
+      },
+      {
+        "name": "ejr:the_all_knowing_sage_live_0",
+        "stream": false
+      },
+      {
+        "name": "ejr:the_all_knowing_sage_live_1",
+        "stream": false
+      },
+      {
+        "name": "ejr:the_all_knowing_sage_live_2",
+        "stream": false
+      }
+    ]
+  },
+  "the_all_knowing_sage_hurt": {
+    "sounds": [
+      {
+        "name": "ejr:the_all_knowing_sage_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "the_all_knowing_sage_death": {
+    "sounds": [
+      {
+        "name": "ejr:the_all_knowing_sage_death",
+        "stream": false
+      }
+    ]
   }
 }

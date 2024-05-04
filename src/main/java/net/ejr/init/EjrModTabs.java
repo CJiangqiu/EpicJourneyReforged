@@ -31,5 +31,7 @@ public class EjrModTabs {
 				tabData.accept(EjrModItems.STEEL_BOW.get());
 				tabData.accept(EjrModItems.STEEL_SHIELD.get());
 				tabData.accept(EjrModItems.THE_LOST_SPAWN_EGG.get());
+				tabData.accept(EjrModItems.DEAD_IMPERIAL_SOLDIER_SPAWN_EGG.get());
+				tabData.accept(EjrModItems.THE_ALL_KNOWING_SAGE_SPAWN_EGG.get());
 			}).withSearchBar().build());
 }

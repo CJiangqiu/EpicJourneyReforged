@@ -19,6 +19,7 @@ import net.minecraft.network.FriendlyByteBuf;
 
 import net.ejr.init.EjrModTabs;
 import net.ejr.init.EjrModSounds;
+import net.ejr.init.EjrModMenus;
 import net.ejr.init.EjrModItems;
 import net.ejr.init.EjrModEntities;
 
@@ -48,6 +49,7 @@ public class EjrMod {
 
 		EjrModTabs.REGISTRY.register(bus);
 
+		EjrModMenus.REGISTRY.register(bus);
 		// Start of user code block mod init
 		// End of user code block mod init
 	}

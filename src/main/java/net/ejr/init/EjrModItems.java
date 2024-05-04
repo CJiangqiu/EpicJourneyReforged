@@ -48,6 +48,8 @@ public class EjrModItems {
 	public static final RegistryObject<Item> STEEL_BOW = REGISTRY.register("steel_bow", () -> new SteelBowItem());
 	public static final RegistryObject<Item> STEEL_SHIELD = REGISTRY.register("steel_shield", () -> new SteelShieldItem());
 	public static final RegistryObject<Item> THE_LOST_SPAWN_EGG = REGISTRY.register("the_lost_spawn_egg", () -> new ForgeSpawnEggItem(EjrModEntities.THE_LOST, -13421569, -16711936, new Item.Properties()));
+	public static final RegistryObject<Item> DEAD_IMPERIAL_SOLDIER_SPAWN_EGG = REGISTRY.register("dead_imperial_soldier_spawn_egg", () -> new ForgeSpawnEggItem(EjrModEntities.DEAD_IMPERIAL_SOLDIER, -6710887, -1, new Item.Properties()));
+	public static final RegistryObject<Item> THE_ALL_KNOWING_SAGE_SPAWN_EGG = REGISTRY.register("the_all_knowing_sage_spawn_egg", () -> new ForgeSpawnEggItem(EjrModEntities.THE_ALL_KNOWING_SAGE, -3355444, -1, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

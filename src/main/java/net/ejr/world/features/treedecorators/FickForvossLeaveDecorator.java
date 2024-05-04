@@ -67,10 +67,10 @@ public class FickForvossLeaveDecorator extends LeaveVineDecorator {
 	}
 
 	private static void addVine(BlockPos pos, Direction direction, TreeDecorator.Context context) {
-		context.setBlock(pos, Blocks.WEEPING_VINES.defaultBlockState());
+		context.setBlock(pos, Blocks.BROWN_MUSHROOM_BLOCK.defaultBlockState());
 		int i = 4;
 		for (BlockPos blockpos = pos.below(); context.isAir(blockpos) && i > 0; --i) {
-			context.setBlock(blockpos, oriented(Blocks.WEEPING_VINES.defaultBlockState(), direction));
+			context.setBlock(blockpos, oriented(Blocks.BROWN_MUSHROOM_BLOCK.defaultBlockState(), direction));
 			blockpos = blockpos.below();
 		}
 	}

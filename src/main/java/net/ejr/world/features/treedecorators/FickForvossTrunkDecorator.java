@@ -38,25 +38,25 @@ public class FickForvossTrunkDecorator extends TrunkVineDecorator {
 			if (context.random().nextInt(3) > 0) {
 				BlockPos pos = blockpos.west();
 				if (context.isAir(pos)) {
-					context.setBlock(pos, oriented(Blocks.WEEPING_VINES.defaultBlockState(), Direction.EAST));
+					context.setBlock(pos, oriented(Blocks.BROWN_MUSHROOM_BLOCK.defaultBlockState(), Direction.EAST));
 				}
 			}
 			if (context.random().nextInt(3) > 0) {
 				BlockPos pos = blockpos.east();
 				if (context.isAir(pos)) {
-					context.setBlock(pos, oriented(Blocks.WEEPING_VINES.defaultBlockState(), Direction.WEST));
+					context.setBlock(pos, oriented(Blocks.BROWN_MUSHROOM_BLOCK.defaultBlockState(), Direction.WEST));
 				}
 			}
 			if (context.random().nextInt(3) > 0) {
 				BlockPos pos = blockpos.north();
 				if (context.isAir(pos)) {
-					context.setBlock(pos, oriented(Blocks.WEEPING_VINES.defaultBlockState(), Direction.SOUTH));
+					context.setBlock(pos, oriented(Blocks.BROWN_MUSHROOM_BLOCK.defaultBlockState(), Direction.SOUTH));
 				}
 			}
 			if (context.random().nextInt(3) > 0) {
 				BlockPos pos = blockpos.south();
 				if (context.isAir(pos)) {
-					context.setBlock(pos, oriented(Blocks.WEEPING_VINES.defaultBlockState(), Direction.NORTH));
+					context.setBlock(pos, oriented(Blocks.BROWN_MUSHROOM_BLOCK.defaultBlockState(), Direction.NORTH));
 				}
 			}
 		});
