@@ -65,5 +65,13 @@
         "stream": false
       }
     ]
+  },
+  "wolf_knight_of_the_moon": {
+    "sounds": [
+      {
+        "name": "ejr:the_knight_of_moon_wolf",
+        "stream": true
+      }
+    ]
   }
 }

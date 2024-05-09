@@ -134,11 +134,6 @@ public class TheAllKnowingSageEntity extends PathfinderMob implements GeoEntity 
 	}
 
 	@Override
-	public SoundEvent getAmbientSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ejr:the_all_knowing_sage_live"));
-	}
-
-	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ejr:the_all_knowing_sage_hurt"));
 	}
@@ -153,8 +148,6 @@ public class TheAllKnowingSageEntity extends PathfinderMob implements GeoEntity 
 		if (source.is(DamageTypes.IN_FIRE))
 			return false;
 		if (source.getDirectEntity() instanceof AbstractArrow)
-			return false;
-		if (source.getDirectEntity() instanceof Player)
 			return false;
 		if (source.getDirectEntity() instanceof ThrownPotion || source.getDirectEntity() instanceof AreaEffectCloud)
 			return false;
@@ -171,12 +164,6 @@ public class TheAllKnowingSageEntity extends PathfinderMob implements GeoEntity 
 		if (source.is(DamageTypes.TRIDENT))
 			return false;
 		if (source.is(DamageTypes.FALLING_ANVIL))
-			return false;
-		if (source.is(DamageTypes.DRAGON_BREATH))
-			return false;
-		if (source.is(DamageTypes.WITHER))
-			return false;
-		if (source.is(DamageTypes.WITHER_SKULL))
 			return false;
 		return super.hurt(source, amount);
 	}
@@ -231,7 +218,7 @@ public class TheAllKnowingSageEntity extends PathfinderMob implements GeoEntity 
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.2);
 		builder = builder.add(Attributes.MAX_HEALTH, 100);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 2);

@@ -4,13 +4,25 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.InventoryScreen;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.ejr.world.inventory.TalkingGuiMenu;
+import net.ejr.procedures.TaskProgress0TalkingShowProcedure;
+import net.ejr.procedures.TaskProgress0TalkingProcedure;
+import net.ejr.procedures.TaskProgress0Talking2ShowProcedure;
+import net.ejr.procedures.TaskProgress0Talking2Procedure;
+import net.ejr.procedures.TaskProgress0Talking1ShowProcedure;
+import net.ejr.procedures.TaskProgress0Talking1Procedure;
+import net.ejr.procedures.TaskProgress0Talking0ShowProcedure;
+import net.ejr.procedures.TaskProgress0Talking0Procedure;
 import net.ejr.procedures.GetTalkingNpcModelProcedure;
+import net.ejr.network.TalkingGuiButtonMessage;
+import net.ejr.EjrMod;
 
 import java.util.HashMap;
 
@@ -21,6 +33,9 @@ public class TalkingGuiScreen extends AbstractContainerScreen<TalkingGuiMenu> {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	Button button_where_am_i;
+	Button button_who_are_you;
+	Button button_why_am_i_here;
 
 	public TalkingGuiScreen(TalkingGuiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -29,8 +44,8 @@ public class TalkingGuiScreen extends AbstractContainerScreen<TalkingGuiMenu> {
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 176;
-		this.imageHeight = 166;
+		this.imageWidth = 425;
+		this.imageHeight = 240;
 	}
 
 	@Override
@@ -38,8 +53,7 @@ public class TalkingGuiScreen extends AbstractContainerScreen<TalkingGuiMenu> {
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		if (GetTalkingNpcModelProcedure.execute(world, x, y, z) instanceof LivingEntity livingEntity) {
-			InventoryScreen.renderEntityInInventoryFollowsAngle(guiGraphics, this.leftPos + -68, this.topPos + 166, 30, 0f + (float) Math.atan((this.leftPos + -68 - mouseX) / 40.0), (float) Math.atan((this.topPos + 117 - mouseY) / 40.0),
-					livingEntity);
+			InventoryScreen.renderEntityInInventoryFollowsAngle(guiGraphics, this.leftPos + 57, this.topPos + 203, 30, 0f + (float) Math.atan((this.leftPos + 57 - mouseX) / 40.0), (float) Math.atan((this.topPos + 154 - mouseY) / 40.0), livingEntity);
 		}
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -49,6 +63,9 @@ public class TalkingGuiScreen extends AbstractContainerScreen<TalkingGuiMenu> {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
+
+		guiGraphics.blit(new ResourceLocation("ejr:textures/screens/talking_gui.png"), this.leftPos + 0, this.topPos + 121, 0, 0, 425, 120, 425, 120);
+
 		RenderSystem.disableBlend();
 	}
 
@@ -68,10 +85,68 @@ public class TalkingGuiScreen extends AbstractContainerScreen<TalkingGuiMenu> {
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
+		if (TaskProgress0Talking0ShowProcedure.execute(entity))
+			guiGraphics.drawString(this.font,
+
+					TaskProgress0Talking0Procedure.execute(), 29, 132, -12829636, false);
+		if (TaskProgress0TalkingShowProcedure.execute(entity))
+			guiGraphics.drawString(this.font,
+
+					TaskProgress0TalkingProcedure.execute(), 30, 132, -12829636, false);
+		if (TaskProgress0Talking1ShowProcedure.execute(entity))
+			guiGraphics.drawString(this.font,
+
+					TaskProgress0Talking1Procedure.execute(), 19, 132, -12829636, false);
+		if (TaskProgress0Talking2ShowProcedure.execute(entity))
+			guiGraphics.drawString(this.font,
+
+					TaskProgress0Talking2Procedure.execute(), 19, 132, -12829636, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
+		button_where_am_i = Button.builder(Component.translatable("gui.ejr.talking_gui.button_where_am_i"), e -> {
+			if (TaskProgress0TalkingShowProcedure.execute(entity)) {
+				EjrMod.PACKET_HANDLER.sendToServer(new TalkingGuiButtonMessage(0, x, y, z));
+				TalkingGuiButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
+		}).bounds(this.leftPos + 153, this.topPos + 161, 82, 20).build(builder -> new Button(builder) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (TaskProgress0TalkingShowProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		});
+		guistate.put("button:button_where_am_i", button_where_am_i);
+		this.addRenderableWidget(button_where_am_i);
+		button_who_are_you = Button.builder(Component.translatable("gui.ejr.talking_gui.button_who_are_you"), e -> {
+			if (TaskProgress0Talking0ShowProcedure.execute(entity)) {
+				EjrMod.PACKET_HANDLER.sendToServer(new TalkingGuiButtonMessage(1, x, y, z));
+				TalkingGuiButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
+		}).bounds(this.leftPos + 153, this.topPos + 187, 87, 20).build(builder -> new Button(builder) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (TaskProgress0Talking0ShowProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		});
+		guistate.put("button:button_who_are_you", button_who_are_you);
+		this.addRenderableWidget(button_who_are_you);
+		button_why_am_i_here = Button.builder(Component.translatable("gui.ejr.talking_gui.button_why_am_i_here"), e -> {
+			if (TaskProgress0Talking1ShowProcedure.execute(entity)) {
+				EjrMod.PACKET_HANDLER.sendToServer(new TalkingGuiButtonMessage(2, x, y, z));
+				TalkingGuiButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
+		}).bounds(this.leftPos + 153, this.topPos + 215, 97, 20).build(builder -> new Button(builder) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (TaskProgress0Talking1ShowProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		});
+		guistate.put("button:button_why_am_i_here", button_why_am_i_here);
+		this.addRenderableWidget(button_why_am_i_here);
 	}
 }

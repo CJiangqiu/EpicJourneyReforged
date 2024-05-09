@@ -56,7 +56,7 @@
     "attackStrength": 2,
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
-    "movementSpeed": 0.3,
+    "movementSpeed": 0.19999999999999998,
     "armorBaseValue": 0.0,
     "trackingRange": 64,
     "followRange": 16,
@@ -80,17 +80,17 @@
     "immuneToDrowning": true,
     "immuneToLightning": true,
     "immuneToPotions": true,
-    "immuneToPlayer": true,
+    "immuneToPlayer": false,
     "immuneToExplosion": true,
     "immuneToTrident": true,
     "immuneToAnvil": true,
-    "immuneToWither": true,
-    "immuneToDragonBreath": true,
+    "immuneToWither": false,
+    "immuneToDragonBreath": false,
     "mobDrop": {
       "value": "CUSTOM:Scroll"
     },
     "livingSound": {
-      "value": "CUSTOM:the_all_knowing_sage_live"
+      "value": ""
     },
     "hurtSound": {
       "value": "CUSTOM:the_all_knowing_sage_hurt"

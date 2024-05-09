@@ -3,7 +3,7 @@
     {
       "name": "Scroll",
       "type": "item",
-      "sortid": 2,
+      "sortid": 1,
       "compiles": true,
       "locked_code": false,
       "registry_name": "scroll",
@@ -17,7 +17,7 @@
     {
       "name": "EpicJourneyReforged",
       "type": "tab",
-      "sortid": 1,
+      "sortid": 18,
       "compiles": true,
       "locked_code": false,
       "registry_name": "epic_journey_reforged",
@@ -28,7 +28,7 @@
     {
       "name": "CopperCoin",
       "type": "item",
-      "sortid": 3,
+      "sortid": 2,
       "compiles": true,
       "locked_code": false,
       "registry_name": "copper_coin",
@@ -42,7 +42,7 @@
     {
       "name": "SilverCoin",
       "type": "item",
-      "sortid": 4,
+      "sortid": 3,
       "compiles": true,
       "locked_code": false,
       "registry_name": "silver_coin",
@@ -56,7 +56,7 @@
     {
       "name": "GoldCoin",
       "type": "item",
-      "sortid": 5,
+      "sortid": 4,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gold_coin",
@@ -70,7 +70,7 @@
     {
       "name": "Purse",
       "type": "item",
-      "sortid": 6,
+      "sortid": 5,
       "compiles": true,
       "locked_code": false,
       "registry_name": "purse",
@@ -84,7 +84,7 @@
     {
       "name": "PurseRecipe",
       "type": "recipe",
-      "sortid": 7,
+      "sortid": 19,
       "compiles": true,
       "locked_code": false,
       "registry_name": "purse_recipe",
@@ -97,7 +97,7 @@
     {
       "name": "SteelSword",
       "type": "tool",
-      "sortid": 8,
+      "sortid": 6,
       "compiles": true,
       "locked_code": false,
       "registry_name": "steel_sword",
@@ -111,7 +111,7 @@
     {
       "name": "SteelAxe",
       "type": "tool",
-      "sortid": 9,
+      "sortid": 7,
       "compiles": true,
       "locked_code": false,
       "registry_name": "steel_axe",
@@ -125,7 +125,7 @@
     {
       "name": "SteelPickaxe",
       "type": "tool",
-      "sortid": 10,
+      "sortid": 8,
       "compiles": true,
       "locked_code": false,
       "registry_name": "steel_pickaxe",
@@ -139,7 +139,7 @@
     {
       "name": "SteelShovel",
       "type": "tool",
-      "sortid": 11,
+      "sortid": 9,
       "compiles": true,
       "locked_code": false,
       "registry_name": "steel_shovel",
@@ -153,7 +153,7 @@
     {
       "name": "SteelHoe",
       "type": "tool",
-      "sortid": 12,
+      "sortid": 10,
       "compiles": true,
       "locked_code": false,
       "registry_name": "steel_hoe",
@@ -167,7 +167,7 @@
     {
       "name": "SteelSwordRecipe",
       "type": "recipe",
-      "sortid": 13,
+      "sortid": 20,
       "compiles": true,
       "locked_code": false,
       "registry_name": "steel_sword_recipe",
@@ -180,7 +180,7 @@
     {
       "name": "SteelAxeRecipe",
       "type": "recipe",
-      "sortid": 14,
+      "sortid": 21,
       "compiles": true,
       "locked_code": false,
       "registry_name": "steel_axe_recipe",
@@ -193,7 +193,7 @@
     {
       "name": "SteelPickaxeRecipe",
       "type": "recipe",
-      "sortid": 15,
+      "sortid": 22,
       "compiles": true,
       "locked_code": false,
       "registry_name": "steel_pickaxe_recipe",
@@ -206,7 +206,7 @@
     {
       "name": "SteelShovelRecipe",
       "type": "recipe",
-      "sortid": 16,
+      "sortid": 23,
       "compiles": true,
       "locked_code": false,
       "registry_name": "steel_shovel_recipe",
@@ -219,7 +219,7 @@
     {
       "name": "SteelHoeRecipe",
       "type": "recipe",
-      "sortid": 17,
+      "sortid": 24,
       "compiles": true,
       "locked_code": false,
       "registry_name": "steel_hoe_recipe",
@@ -232,7 +232,7 @@
     {
       "name": "SteelBow",
       "type": "item",
-      "sortid": 18,
+      "sortid": 11,
       "compiles": true,
       "locked_code": true,
       "registry_name": "steel_bow",
@@ -246,7 +246,7 @@
     {
       "name": "SteelShield",
       "type": "tool",
-      "sortid": 21,
+      "sortid": 12,
       "compiles": true,
       "locked_code": true,
       "registry_name": "steel_shield",
@@ -261,7 +261,7 @@
     {
       "name": "SteelBowRecipe",
       "type": "recipe",
-      "sortid": 22,
+      "sortid": 25,
       "compiles": true,
       "locked_code": false,
       "registry_name": "steel_bow_recipe",
@@ -274,7 +274,7 @@
     {
       "name": "SteelShieldRecipe",
       "type": "recipe",
-      "sortid": 23,
+      "sortid": 26,
       "compiles": true,
       "locked_code": false,
       "registry_name": "steel_shield_recipe",
@@ -287,7 +287,7 @@
     {
       "name": "ClientProxy",
       "type": "code",
-      "sortid": 24,
+      "sortid": 27,
       "compiles": true,
       "locked_code": true,
       "registry_name": "client_proxy",
@@ -300,7 +300,7 @@
     {
       "name": "FickForvoss",
       "type": "biome",
-      "sortid": 25,
+      "sortid": 28,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fick_forvoss",
@@ -318,7 +318,7 @@
     {
       "name": "TheLost",
       "type": "animatedentity",
-      "sortid": 26,
+      "sortid": 16,
       "compiles": true,
       "locked_code": false,
       "registry_name": "the_lost",
@@ -335,7 +335,7 @@
     {
       "name": "DeadImperialSoldier",
       "type": "livingentity",
-      "sortid": 27,
+      "sortid": 15,
       "compiles": true,
       "locked_code": false,
       "registry_name": "dead_imperial_soldier",
@@ -362,6 +362,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -388,7 +404,7 @@
     {
       "name": "TheAllKnowingSage",
       "type": "animatedentity",
-      "sortid": 31,
+      "sortid": 14,
       "compiles": true,
       "locked_code": false,
       "registry_name": "the_all_knowing_sage",
@@ -404,12 +420,13 @@
     {
       "name": "TalkingGui",
       "type": "gui",
-      "sortid": 32,
+      "sortid": 31,
       "compiles": true,
       "locked_code": false,
       "registry_name": "talking_gui",
       "metadata": {
         "files": [
+          "src/main/java/net/ejr/network/TalkingGuiButtonMessage.java",
           "src/main/java/net/ejr/client/gui/TalkingGuiScreen.java",
           "src/main/java/net/ejr/world/inventory/TalkingGuiMenu.java"
         ]
@@ -418,7 +435,7 @@
     {
       "name": "RightClickNpc",
       "type": "procedure",
-      "sortid": 33,
+      "sortid": 32,
       "compiles": true,
       "locked_code": false,
       "registry_name": "right_click_npc",
@@ -457,7 +474,7 @@
     {
       "name": "GetTalkingNpcModel",
       "type": "procedure",
-      "sortid": 34,
+      "sortid": 33,
       "compiles": true,
       "locked_code": false,
       "registry_name": "get_talking_npc_model",
@@ -483,6 +500,342 @@
             "name": "world",
             "type": "world"
           }
+        ]
+      }
+    },
+    {
+      "name": "TaskProgress0Answer0",
+      "type": "procedure",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "task_progress_0_answer_0",
+      "metadata": {
+        "files": [
+          "src/main/java/net/ejr/procedures/TaskProgress0Answer0Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TaskProgress0Talking0",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "task_progress_0_talking_0",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/ejr/procedures/TaskProgress0Talking0Procedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "TaskProgress0TalkingShow",
+      "type": "procedure",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "task_progress_0_talking_show",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/ejr/procedures/TaskProgress0TalkingShowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TaskProgress0Talking",
+      "type": "procedure",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "task_progress_0_talking",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/ejr/procedures/TaskProgress0TalkingProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "TaskProgress0Talking0Show",
+      "type": "procedure",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "task_progress_0_talking_0_show",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/ejr/procedures/TaskProgress0Talking0ShowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TaskProgress0Answer1",
+      "type": "procedure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "task_progress_0_answer_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/ejr/procedures/TaskProgress0Answer1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TaskProgress0Talking1",
+      "type": "procedure",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "task_progress_0_talking_1",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/ejr/procedures/TaskProgress0Talking1Procedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "TaskProgress0Talking1Show",
+      "type": "procedure",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "task_progress_0_talking_1_show",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/ejr/procedures/TaskProgress0Talking1ShowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TaskProgress0Talking2",
+      "type": "procedure",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "task_progress_0_talking_2",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/ejr/procedures/TaskProgress0Talking2Procedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "TaskProgress0Talking2Show",
+      "type": "procedure",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "task_progress_0_talking_2_show",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/ejr/procedures/TaskProgress0Talking2ShowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TaskProgress0Answer2",
+      "type": "procedure",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "task_progress_0_answer_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/ejr/procedures/TaskProgress0Answer2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WolfKnightOfTheMoon",
+      "type": "animatedentity",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wolf_knight_of_the_moon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/ejr/entity/WolfKnightOfTheMoonEntity.java",
+          "src/main/java/net/ejr/client/renderer/WolfKnightOfTheMoonRenderer.java",
+          "src/main/java/net/ejr/entity/model/WolfKnightOfTheMoonModel.java",
+          "src/main/resources/assets/ejr/models/item/wolf_knight_of_the_moon_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "DashAttack",
+      "type": "procedure",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "dash_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/net/ejr/procedures/DashAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SteelArmor",
+      "type": "armor",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ejr/models/item/steel_armor_helmet.json",
+          "src/main/resources/assets/ejr/models/item/steel_armor_boots.json",
+          "src/main/resources/assets/ejr/models/item/steel_armor_chestplate.json",
+          "src/main/resources/assets/ejr/models/item/steel_armor_leggings.json",
+          "src/main/java/net/ejr/item/SteelArmorItem.java"
+        ]
+      }
+    },
+    {
+      "name": "WolfKnightOfTheMoonMusic",
+      "type": "procedure",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wolf_knight_of_the_moon_music",
+      "metadata": {
+        "files": [
+          "src/main/java/net/ejr/procedures/WolfKnightOfTheMoonMusicProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SteelHelmetRecipe",
+      "type": "recipe",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_helmet_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ejr/recipes/steel_helmet_recipe.json"
+        ]
+      }
+    },
+    {
+      "name": "SteelChestplateRecipe",
+      "type": "recipe",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_chestplate_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ejr/recipes/steel_chestplate_recipe.json"
+        ]
+      }
+    },
+    {
+      "name": "SteelLeggingsRecipe",
+      "type": "recipe",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_leggings_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ejr/recipes/steel_leggings_recipe.json"
+        ]
+      }
+    },
+    {
+      "name": "SteelBootsRecipe",
+      "type": "recipe",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_boots_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ejr/recipes/steel_boots_recipe.json"
         ]
       }
     }
@@ -547,9 +900,21 @@
       ],
       "category": "ambient",
       "subtitle": ""
+    },
+    {
+      "name": "wolf_knight_of_the_moon",
+      "files": [
+        "the_knight_of_moon_wolf"
+      ],
+      "category": "music",
+      "subtitle": ""
     }
   ],
   "tag_elements": {
+    "ENTITIES:minecraft:powder_snow_walkable_mobs": [
+      "CUSTOM:TheAllKnowingSage",
+      "CUSTOM:WolfKnightOfTheMoon"
+    ],
     "BIOMES:minecraft:has_structure/buried_treasure": [
       "~CUSTOM:FickForvoss"
     ],
@@ -571,6 +936,8 @@
       "item.ejr.steel_bow": "Steel Bow",
       "biome.ejr.fick_forvoss": "Fick·Forvoss",
       "item.ejr.copper_coin": "Copper Coin",
+      "item.ejr.steel_armor_helmet": "Steel Helmet",
+      "entity.ejr.wolf_knight_of_the_moon": "Wolf Knight of the Moon",
       "subtitles.the_all_knowing_sage_death": "",
       "subtitles.the_lost_death": "The Lost:Death",
       "item.ejr.steel_hoe": "Steel Hoe",
@@ -578,19 +945,31 @@
       "item.ejr.steel_sword": "Steel Sword",
       "item.ejr.steel_shovel": "Steel Shovel",
       "item.ejr.steel_shield": "Steel Shield",
+      "gui.ejr.talking_gui.button_why_am_i_here": "Why am I here?",
+      "subtitles.wolf_knight_of_the_moon": "",
       "entity.ejr.the_lost": "The Lost",
       "item.ejr.purse": "Purse",
       "subtitles.the_all_knowing_sage_hurt": "",
       "item.ejr.scroll": "Scroll",
       "item_group.ejr.epic_journey_reforged": "§5Epic Journey",
+      "item.ejr.wolf_knight_of_the_moon_spawn_egg": "Wolf Knight of the Moon Spawn Egg",
+      "item.ejr.steel_armor_chestplate": "Steel Chestplate",
       "entity.ejr.dead_imperial_soldier": "Dead Imperial Soldier",
       "item.ejr.the_all_knowing_sage_spawn_egg": "The All-Knowing Sage Spawn Egg",
+      "gui.ejr.talking_gui.button_who_are_you": "Who are you?",
       "item.ejr.gold_coin": "Gold Coin",
       "entity.ejr.the_all_knowing_sage": "The All-Knowing Sage",
+      "item.ejr.steel_armor_leggings": "Steel Leggings",
+      "gui.ejr.talking_gui.button_where_am_i": "Where am I?",
+      "task_progress.0": "Ah, you finally wake. I know you are very confused now: where am I?",
       "item.ejr.steel_pickaxe": "Steel Pickaxe",
+      "item.ejr.steel_armor_boots": "Steel Boots",
       "subtitles.the_all_knowing_sage_live": "",
+      "task_progress.0.1": "Me? Well, in terms of behavior, I am an old man who paid a great price to summon you from a different world.",
+      "task_progress.0.2": "Please allow me to call you \"Realm Piercer\". I have reshaped a body for you that is suitable for life in this world.",
       "subtitles.the_lost_live": "The Lost:Groan",
-      "item.ejr.dead_imperial_soldier_spawn_egg": "Dead Imperial Soldier Spawn Egg"
+      "item.ejr.dead_imperial_soldier_spawn_egg": "Dead Imperial Soldier Spawn Egg",
+      "task_progress.0.0": " This is \"another world\".Now, this world is ...\"Fade\"."
     },
     "zh_cn": {
       "item.ejr.steel_axe": "钢斧",
@@ -599,26 +978,40 @@
       "item.ejr.steel_bow": "钢弓",
       "biome.ejr.fick_forvoss": "菲克·佛沃斯",
       "item.ejr.copper_coin": "铜币",
+      "item.ejr.steel_armor_helmet": "钢头盔",
+      "entity.ejr.wolf_knight_of_the_moon": "月狼骑士",
       "subtitles.the_all_knowing_sage_death": "",
       "subtitles.the_lost_death": "迷失者：死亡",
-      "item.ejr.steel_hoe": "钢锄",
       "subtitles.the_lost_hurt": "迷失者：受伤",
+      "item.ejr.steel_hoe": "钢锄",
       "item.ejr.steel_sword": "钢剑",
       "item.ejr.steel_shovel": "钢锹",
       "item.ejr.steel_shield": "钢盾",
+      "gui.ejr.talking_gui.button_why_am_i_here": "我在哪？",
+      "subtitles.wolf_knight_of_the_moon": "",
       "item.ejr.purse": "钱袋",
       "entity.ejr.the_lost": "迷失者",
       "subtitles.the_all_knowing_sage_hurt": "",
       "item.ejr.scroll": "卷轴",
       "item_group.ejr.epic_journey_reforged": "§5史诗征程",
+      "item.ejr.wolf_knight_of_the_moon_spawn_egg": "月狼骑士生成蛋",
+      "item.ejr.steel_armor_chestplate": "钢胸甲",
       "entity.ejr.dead_imperial_soldier": "死去的帝国士兵",
       "item.ejr.the_all_knowing_sage_spawn_egg": "全知贤者生成蛋",
+      "gui.ejr.talking_gui.button_who_are_you": "你是谁？",
       "item.ejr.gold_coin": "金币",
       "entity.ejr.the_all_knowing_sage": "全知贤者",
+      "item.ejr.steel_armor_leggings": "钢护腿",
+      "gui.ejr.talking_gui.button_where_am_i": "我在哪？",
+      "task_progress.0": "啊，您终于醒了，我知道您现在十分迷茫：我这是在哪？",
       "item.ejr.steel_pickaxe": "钢镐",
+      "item.ejr.steel_armor_boots": "钢靴",
       "subtitles.the_all_knowing_sage_live": "",
+      "task_progress.0.1": "我？嗯，从行为上来讲，我是个付出大量代价将您从异世界召唤而来的老头。",
+      "task_progress.0.2": "”穿界者“，请允许我这样称呼您，我几乎牺牲了自己的全部将您从”外界“召唤至此，并为您重塑了一个适合在这个世界生存的肉体",
       "subtitles.the_lost_live": "迷失者：呻吟",
-      "item.ejr.dead_imperial_soldier_spawn_egg": "死去的帝国士兵生成蛋"
+      "item.ejr.dead_imperial_soldier_spawn_egg": "死去的帝国士兵生成蛋",
+      "task_progress.0.0": "这是“另一个世界”，它正在,,,“消逝”。"
     }
   },
   "foldersRoot": {
@@ -639,6 +1032,7 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
+      "use_compiled_mods",
       "curios_api",
       "jade",
       "patchouli",

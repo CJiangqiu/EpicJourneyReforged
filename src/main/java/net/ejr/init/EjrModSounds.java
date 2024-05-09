@@ -21,4 +21,5 @@ public class EjrModSounds {
 	public static final RegistryObject<SoundEvent> THE_ALL_KNOWING_SAGE_LIVE = REGISTRY.register("the_all_knowing_sage_live", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("ejr", "the_all_knowing_sage_live")));
 	public static final RegistryObject<SoundEvent> THE_ALL_KNOWING_SAGE_HURT = REGISTRY.register("the_all_knowing_sage_hurt", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("ejr", "the_all_knowing_sage_hurt")));
 	public static final RegistryObject<SoundEvent> THE_ALL_KNOWING_SAGE_DEATH = REGISTRY.register("the_all_knowing_sage_death", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("ejr", "the_all_knowing_sage_death")));
+	public static final RegistryObject<SoundEvent> WOLF_KNIGHT_OF_THE_MOON = REGISTRY.register("wolf_knight_of_the_moon", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("ejr", "wolf_knight_of_the_moon")));
 }

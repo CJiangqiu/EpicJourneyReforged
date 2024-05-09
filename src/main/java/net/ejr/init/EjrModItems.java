@@ -25,6 +25,7 @@ import net.ejr.item.SteelPickaxeItem;
 import net.ejr.item.SteelHoeItem;
 import net.ejr.item.SteelBowItem;
 import net.ejr.item.SteelAxeItem;
+import net.ejr.item.SteelArmorItem;
 import net.ejr.item.SilverCoinItem;
 import net.ejr.item.ScrollItem;
 import net.ejr.item.PurseItem;
@@ -50,6 +51,11 @@ public class EjrModItems {
 	public static final RegistryObject<Item> THE_LOST_SPAWN_EGG = REGISTRY.register("the_lost_spawn_egg", () -> new ForgeSpawnEggItem(EjrModEntities.THE_LOST, -13421569, -16711936, new Item.Properties()));
 	public static final RegistryObject<Item> DEAD_IMPERIAL_SOLDIER_SPAWN_EGG = REGISTRY.register("dead_imperial_soldier_spawn_egg", () -> new ForgeSpawnEggItem(EjrModEntities.DEAD_IMPERIAL_SOLDIER, -6710887, -1, new Item.Properties()));
 	public static final RegistryObject<Item> THE_ALL_KNOWING_SAGE_SPAWN_EGG = REGISTRY.register("the_all_knowing_sage_spawn_egg", () -> new ForgeSpawnEggItem(EjrModEntities.THE_ALL_KNOWING_SAGE, -3355444, -1, new Item.Properties()));
+	public static final RegistryObject<Item> WOLF_KNIGHT_OF_THE_MOON_SPAWN_EGG = REGISTRY.register("wolf_knight_of_the_moon_spawn_egg", () -> new ForgeSpawnEggItem(EjrModEntities.WOLF_KNIGHT_OF_THE_MOON, -1, -16711936, new Item.Properties()));
+	public static final RegistryObject<Item> STEEL_ARMOR_HELMET = REGISTRY.register("steel_armor_helmet", () -> new SteelArmorItem.Helmet());
+	public static final RegistryObject<Item> STEEL_ARMOR_CHESTPLATE = REGISTRY.register("steel_armor_chestplate", () -> new SteelArmorItem.Chestplate());
+	public static final RegistryObject<Item> STEEL_ARMOR_LEGGINGS = REGISTRY.register("steel_armor_leggings", () -> new SteelArmorItem.Leggings());
+	public static final RegistryObject<Item> STEEL_ARMOR_BOOTS = REGISTRY.register("steel_armor_boots", () -> new SteelArmorItem.Boots());
 
 	// Start of user code block custom items
 	// End of user code block custom items

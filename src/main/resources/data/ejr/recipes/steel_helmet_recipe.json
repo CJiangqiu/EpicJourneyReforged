@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "a a"
+  ],
+  "key": {
+    "a": {
+      "tag": "forge:ingots/steel"
+    }
+  },
+  "result": {
+    "item": "ejr:steel_armor_helmet",
+    "count": 1
+  }
+}
