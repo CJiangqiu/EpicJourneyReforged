@@ -66,10 +66,58 @@
       }
     ]
   },
+  "wake_up": {
+    "sounds": [
+      {
+        "name": "ejr:wake_up",
+        "stream": true
+      }
+    ]
+  },
+  "epic_journey": {
+    "sounds": [
+      {
+        "name": "ejr:epic_journey_demo",
+        "stream": true
+      }
+    ]
+  },
+  "in_the_journey": {
+    "sounds": [
+      {
+        "name": "ejr:in_the_journey",
+        "stream": true
+      }
+    ]
+  },
+  "journey_begin": {
+    "sounds": [
+      {
+        "name": "ejr:journeys_begin",
+        "stream": true
+      }
+    ]
+  },
+  "by_the_campfire": {
+    "sounds": [
+      {
+        "name": "ejr:by_the_campfire",
+        "stream": true
+      }
+    ]
+  },
+  "the_god_of_fake": {
+    "sounds": [
+      {
+        "name": "ejr:the_god_of_fake",
+        "stream": true
+      }
+    ]
+  },
   "wolf_knight_of_the_moon": {
     "sounds": [
       {
-        "name": "ejr:the_knight_of_moon_wolf",
+        "name": "ejr:wolf_knight_of_the_moon",
         "stream": true
       }
     ]

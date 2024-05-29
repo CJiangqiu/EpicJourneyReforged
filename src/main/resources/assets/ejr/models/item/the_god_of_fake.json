@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "ejr:item/the_god_of_fake"
+  }
+}

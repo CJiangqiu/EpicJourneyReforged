@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "a a"
+  ],
+  "key": {
+    "a": {
+      "tag": "forge:ingots/black_copper"
+    }
+  },
+  "result": {
+    "item": "ejr:black_copper_armor_boots",
+    "count": 1
+  }
+}

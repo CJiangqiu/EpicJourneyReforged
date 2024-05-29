@@ -1,4 +1,5 @@
 
+
 package net.ejr.entity;
 
 import software.bernie.geckolib.util.GeckoLibUtil;
@@ -67,7 +68,6 @@ import net.ejr.init.EjrModItems;
 import net.ejr.init.EjrModEntities;
 
 import javax.annotation.Nullable;
-
 import java.util.List;
 
 public class WolfKnightOfTheMoonEntity extends TamableAnimal implements GeoEntity {
@@ -91,6 +91,9 @@ public class WolfKnightOfTheMoonEntity extends TamableAnimal implements GeoEntit
 		setNoAi(false);
 		setMaxUpStep(1f);
 		this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(EjrModItems.STEEL_SWORD.get()));
+		this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(EjrModItems.STEEL_ARMOR_CHESTPLATE.get()));
+		this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(EjrModItems.STEEL_ARMOR_LEGGINGS.get()));
+		this.setItemSlot(EquipmentSlot.FEET, new ItemStack(EjrModItems.STEEL_ARMOR_BOOTS.get()));
 	}
 
 	@Override

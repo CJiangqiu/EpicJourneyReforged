@@ -1,20 +1,16 @@
 modLoader="javafml"
 loaderVersion="[47,)"
-license="Mozilla Public License 2.0"
+license="Custom license"
 
 [[mods]]
 modId="ejr"
-version="0.0.2"
+version="0.0.3"
 displayName="Epic Journey:Reforged"
-displayURL="https://mcreator.net"
+displayURL="https://github.com/CJiangqiu/EpicJourneyReforged"
 logoFile="logo.png"
-credits="Created using mod maker MCreator - https://mcreator.net/about"
+credits="Anthor:CJiangqiu,Mascot:Mcreator"
 authors="CJiangqiu"
 description="An epic journey in another world."
-
-# Start of user code block mod configuration
-# End of user code block mod configuration
-
 [[dependencies.ejr]]
     modId="minecraft"
     mandatory=true
@@ -23,12 +19,6 @@ description="An epic journey in another world."
     side="BOTH"
 
 
-[[dependencies.ejr]]
-    modId="use_compiled_mods"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
 [[dependencies.ejr]]
     modId="curios_api"
     mandatory=false

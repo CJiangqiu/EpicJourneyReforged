@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "ejr:copper_coin",
+    "ejr:silver_coin",
+    "ejr:gold_coin"
+  ]
+}

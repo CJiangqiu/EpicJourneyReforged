@@ -1,3 +1,4 @@
+
 package net.ejr.procedures;
 
 import net.minecraftforge.network.NetworkHooks;
@@ -12,15 +13,20 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.ejr.world.inventory.TalkingGuiMenu;
 
+import java.util.UUID;
+
 import io.netty.buffer.Unpooled;
 
 public class RightClickNpcProcedure {
+	private static UUID lastEntityUUID = null;
+
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
@@ -41,6 +47,16 @@ public class RightClickNpcProcedure {
 				}
 			}, _bpos);
 		}
-		GetTalkingNpcModelProcedure.execute(world, x, y, z);
+		lastEntityUUID = entity.getUUID();
+	}
+
+	public static Entity getTalkingEntity(LevelAccessor world) {
+		if (lastEntityUUID == null) {
+			return null;
+		}
+		if (world instanceof ServerLevel) {
+			return ((ServerLevel) world).getEntity(lastEntityUUID);
+		}
+		return null;
 	}
 }

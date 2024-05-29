@@ -20,7 +20,7 @@ public class SteelAxeItem extends AxeItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 7.5f;
+				return 7f;
 			}
 
 			public int getLevel() {

@@ -74,7 +74,7 @@ public class TalkingGuiButtonMessage {
 		}
 		if (buttonID == 2) {
 
-			TaskProgress0Answer2Procedure.execute(entity);
+			TaskProgress0Answer2Procedure.execute(world, x, y, z, entity);
 		}
 	}
 

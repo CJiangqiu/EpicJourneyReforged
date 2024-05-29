@@ -1,0 +1,15 @@
+{
+  "parent": "ejr:custom/black_copper_shield",
+  "textures": {
+    "0": "ejr:block/black_copper_shield",
+    "particle": "ejr:item/black_copper_shield"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1
+      },
+      "model": "ejr:item/black_copper_shield_0"
+    }
+  ]
+}

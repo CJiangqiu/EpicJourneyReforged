@@ -16,8 +16,10 @@ import net.ejr.procedures.TaskProgress0TalkingShowProcedure;
 import net.ejr.procedures.TaskProgress0TalkingProcedure;
 import net.ejr.procedures.TaskProgress0Talking2ShowProcedure;
 import net.ejr.procedures.TaskProgress0Talking2Procedure;
+import net.ejr.procedures.TaskProgress0Talking20Procedure;
 import net.ejr.procedures.TaskProgress0Talking1ShowProcedure;
 import net.ejr.procedures.TaskProgress0Talking1Procedure;
+import net.ejr.procedures.TaskProgress0Talking10Procedure;
 import net.ejr.procedures.TaskProgress0Talking0ShowProcedure;
 import net.ejr.procedures.TaskProgress0Talking0Procedure;
 import net.ejr.procedures.GetTalkingNpcModelProcedure;
@@ -53,7 +55,7 @@ public class TalkingGuiScreen extends AbstractContainerScreen<TalkingGuiMenu> {
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		if (GetTalkingNpcModelProcedure.execute(world, x, y, z) instanceof LivingEntity livingEntity) {
-			InventoryScreen.renderEntityInInventoryFollowsAngle(guiGraphics, this.leftPos + 57, this.topPos + 203, 30, 0f + (float) Math.atan((this.leftPos + 57 - mouseX) / 40.0), (float) Math.atan((this.topPos + 154 - mouseY) / 40.0), livingEntity);
+			InventoryScreen.renderEntityInInventoryFollowsAngle(guiGraphics, this.leftPos + 75, this.topPos + 236, 30, 0f + (float) Math.atan((this.leftPos + 75 - mouseX) / 40.0), (float) Math.atan((this.topPos + 187 - mouseY) / 40.0), livingEntity);
 		}
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -88,19 +90,27 @@ public class TalkingGuiScreen extends AbstractContainerScreen<TalkingGuiMenu> {
 		if (TaskProgress0Talking0ShowProcedure.execute(entity))
 			guiGraphics.drawString(this.font,
 
-					TaskProgress0Talking0Procedure.execute(), 29, 132, -12829636, false);
+					TaskProgress0Talking0Procedure.execute(), 58, 129, -12829636, false);
 		if (TaskProgress0TalkingShowProcedure.execute(entity))
 			guiGraphics.drawString(this.font,
 
-					TaskProgress0TalkingProcedure.execute(), 30, 132, -12829636, false);
+					TaskProgress0TalkingProcedure.execute(), 57, 128, -12829636, false);
 		if (TaskProgress0Talking1ShowProcedure.execute(entity))
 			guiGraphics.drawString(this.font,
 
-					TaskProgress0Talking1Procedure.execute(), 19, 132, -12829636, false);
+					TaskProgress0Talking1Procedure.execute(), 36, 129, -12829636, false);
 		if (TaskProgress0Talking2ShowProcedure.execute(entity))
 			guiGraphics.drawString(this.font,
 
-					TaskProgress0Talking2Procedure.execute(), 19, 132, -12829636, false);
+					TaskProgress0Talking2Procedure.execute(), 36, 129, -12829636, false);
+		if (TaskProgress0Talking1ShowProcedure.execute(entity))
+			guiGraphics.drawString(this.font,
+
+					TaskProgress0Talking10Procedure.execute(), 47, 138, -12829636, false);
+		if (TaskProgress0Talking2ShowProcedure.execute(entity))
+			guiGraphics.drawString(this.font,
+
+					TaskProgress0Talking20Procedure.execute(), 46, 138, -12829636, false);
 	}
 
 	@Override

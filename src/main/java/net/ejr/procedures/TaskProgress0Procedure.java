@@ -10,8 +10,12 @@ import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
@@ -49,20 +53,27 @@ public class TaskProgress0Procedure {
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
+			entity.setPose(Pose.SLEEPING);
 			if (ModList.get().isLoaded("mca")) {
 				EjrMod.queueServerWork(200, () -> {
+					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+						_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 100, 1));
 					if (world instanceof ServerLevel _level) {
 						Entity entityToSpawn = EjrModEntities.THE_ALL_KNOWING_SAGE.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 						if (entityToSpawn != null) {
 						}
 					}
+					entity.setPose(Pose.STANDING);
 				});
 			} else {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 100, 1));
 				if (world instanceof ServerLevel _level) {
 					Entity entityToSpawn = EjrModEntities.THE_ALL_KNOWING_SAGE.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 					if (entityToSpawn != null) {
 					}
 				}
+				entity.setPose(Pose.STANDING);
 			}
 		}
 	}

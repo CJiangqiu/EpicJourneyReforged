@@ -22,7 +22,7 @@ public class ClientProxy {
 	}
 
 	@Mod.EventBusSubscriber
-	private static class ForgeBusEvents {
+	public static class ForgeBusEvents {
 		@SubscribeEvent
 		public static void serverLoad(ServerStartingEvent event) {
 		}
@@ -38,7 +38,16 @@ public class ClientProxy {
 						(itemStack, clientLevel, livingEntity, i) ->
 								livingEntity != null && livingEntity.isUsingItem() && livingEntity.getUseItem() == itemStack ?
 										(float) (itemStack.getUseDuration() - livingEntity.getUseItemRemainingTicks()) / 20.0F : 0.0F);
+
+				ItemProperties.register(EjrModItems.BLACK_COPPER_BOW.get(), new ResourceLocation("pulling"),
+						(itemStack, clientLevel, livingEntity, i) ->
+								livingEntity != null && livingEntity.isUsingItem() && livingEntity.getUseItem() == itemStack ? 1.0F : 0.0F);
+				ItemProperties.register(EjrModItems.BLACK_COPPER_BOW.get(), new ResourceLocation("pull"),
+						(itemStack, clientLevel, livingEntity, i) ->
+								livingEntity != null && livingEntity.isUsingItem() && livingEntity.getUseItem() == itemStack ?
+										(float) (itemStack.getUseDuration() - livingEntity.getUseItemRemainingTicks()) / 20.0F : 0.0F);
 			});
 		}
+
 	}
 }

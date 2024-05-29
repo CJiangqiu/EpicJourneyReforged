@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "ejr:small_tomb",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 64,
+    "separation": 32,
+    "salt": 38156707
+  }
+}

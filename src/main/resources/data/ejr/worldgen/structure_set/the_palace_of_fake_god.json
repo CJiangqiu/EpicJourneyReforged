@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "ejr:the_palace_of_fake_god",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 64,
+    "separation": 32,
+    "salt": 1596276535
+  }
+}

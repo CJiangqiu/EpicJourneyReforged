@@ -8,9 +8,9 @@ import net.minecraftforge.network.NetworkHooks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.EntityType;
@@ -26,7 +26,7 @@ import net.minecraft.network.protocol.Packet;
 import net.ejr.procedures.TaskProgress1Procedure;
 import net.ejr.init.EjrModEntities;
 
-public class DeadImperialSoldierEntity extends Monster {
+public class DeadImperialSoldierEntity extends PathfinderMob {
 	public DeadImperialSoldierEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(EjrModEntities.DEAD_IMPERIAL_SOLDIER.get(), world);
 	}
@@ -69,7 +69,7 @@ public class DeadImperialSoldierEntity extends Monster {
 		Entity entity = this;
 		Level world = this.level();
 
-		TaskProgress1Procedure.execute(entity);
+		TaskProgress1Procedure.execute(sourceentity);
 		return retval;
 	}
 

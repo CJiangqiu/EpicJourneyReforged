@@ -1,6 +1,12 @@
 
 package net.ejr.entity;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.DifficultyInstance;
+import net.minecraft.world.entity.*;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.phys.Vec3;
 import software.bernie.geckolib.util.GeckoLibUtil;
 import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.core.animation.RawAnimation;
@@ -22,17 +28,9 @@ import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MoveBackToVillageGoal;
-import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.BreakDoorGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.SpawnPlacements;
-import net.minecraft.world.entity.Pose;
-import net.minecraft.world.entity.MobType;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
@@ -46,7 +44,7 @@ import net.minecraft.nbt.CompoundTag;
 
 import net.ejr.init.EjrModItems;
 import net.ejr.init.EjrModEntities;
-
+import net.minecraft.world.entity.ai.goal.Goal;
 public class TheLostEntity extends Monster implements GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(TheLostEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(TheLostEntity.class, EntityDataSerializers.STRING);
@@ -67,6 +65,9 @@ public class TheLostEntity extends Monster implements GeoEntity {
 		xpReward = 5;
 		setNoAi(false);
 		setMaxUpStep(0.6f);
+		this.entityData.set(DATA_texture, random.nextInt(2));
+		Vec3 pos = this.position();
+		populateDefaultEquipmentSlots(world.getCurrentDifficultyAt(new BlockPos((int)Math.floor(pos.x), (int)Math.floor(pos.y), (int)Math.floor(pos.z))), (RandomSource)world.random);
 	}
 
 	@Override
@@ -94,12 +95,7 @@ public class TheLostEntity extends Monster implements GeoEntity {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, true) {
-			@Override
-			protected double getAttackReachSqr(LivingEntity entity) {
-				return 4;
-			}
-		});
+		this.goalSelector.addGoal(1, new CustomAttackGoal(this, 1.2));
 		this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setAlertOthers());
 		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1));
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
@@ -107,6 +103,45 @@ public class TheLostEntity extends Monster implements GeoEntity {
 		this.goalSelector.addGoal(6, new MoveBackToVillageGoal(this, 0.6, false));
 	}
 
+	public class CustomAttackGoal extends Goal {
+		private final Monster monster;
+		private final double speedModifier;
+		private int attackTimer;
+
+		public CustomAttackGoal(Monster monster, double speedModifier) {
+			this.monster = monster;
+			this.speedModifier = speedModifier;
+		}
+
+		@Override
+		public boolean canUse() {
+			return this.monster.getTarget() != null;
+		}
+
+		@Override
+		public void start() {
+			this.attackTimer = 80;  // 4秒攻擊一次，每秒20刻
+		}
+
+		@Override
+		public void tick() {
+			LivingEntity target = this.monster.getTarget();
+			if (target != null) {
+				this.monster.getLookControl().setLookAt(target, 30.0F, 30.0F);
+				double d0 = this.monster.distanceToSqr(target.getX(), target.getY(), target.getZ());
+				if (--this.attackTimer <= 0 && d0 <= this.getAttackReachSqr(target)) {
+					this.attackTimer = 80;
+					this.monster.doHurtTarget(target);
+				} else if (d0 > this.getAttackReachSqr(target)) {
+					this.monster.getNavigation().moveTo(target, this.speedModifier);
+				}
+			}
+		}
+
+		protected double getAttackReachSqr(LivingEntity attackTarget) {
+			return (double)(this.monster.getBbWidth() * 2.0F * this.monster.getBbWidth() * 2.0F + attackTarget.getBbWidth());
+		}
+	}
 	@Override
 	public MobType getMobType() {
 		return MobType.UNDEFINED;
@@ -248,4 +283,24 @@ public class TheLostEntity extends Monster implements GeoEntity {
 	public AnimatableInstanceCache getAnimatableInstanceCache() {
 		return this.cache;
 	}
+
+
+	protected void populateDefaultEquipmentSlots(DifficultyInstance difficulty, RandomSource rand) {
+		super.populateDefaultEquipmentSlots(rand,difficulty);
+
+
+
+		if (Math.random() < 0.3) {
+			this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Items.LEATHER_BOOTS));
+		}
+
+		if (Math.random() < 0.3) {
+			this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Items.LEATHER_LEGGINGS));
+		}
+
+		if (Math.random() < 0.3) {
+			this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Items.LEATHER_CHESTPLATE));
+		}
+	}
+
 }

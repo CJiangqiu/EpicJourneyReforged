@@ -1,0 +1,36 @@
+{
+  "display": {
+    "background": "ejr:textures/screens/scroll_gui.png",
+    "icon": {
+      "item": "ejr:scroll"
+    },
+    "title": {
+      "translate": "advancements.journeys_begin.title"
+    },
+    "description": {
+      "translate": "advancements.journeys_begin.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "journeys_begin_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ejr:scroll"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -18,6 +18,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.item.ItemProperties;
 
+import net.ejr.item.WolfKnightOfTheMoonDiscItem;
+import net.ejr.item.WakeUpItem;
+import net.ejr.item.TheGodOfFakeItem;
 import net.ejr.item.SteelSwordItem;
 import net.ejr.item.SteelShovelItem;
 import net.ejr.item.SteelShieldItem;
@@ -29,8 +32,22 @@ import net.ejr.item.SteelArmorItem;
 import net.ejr.item.SilverCoinItem;
 import net.ejr.item.ScrollItem;
 import net.ejr.item.PurseItem;
+import net.ejr.item.JourneysBeginDiscItem;
+import net.ejr.item.InTheJourneyItem;
 import net.ejr.item.GoldCoinItem;
+import net.ejr.item.FinalMessageItem;
+import net.ejr.item.EpicJourneyItem;
 import net.ejr.item.CopperCoinItem;
+import net.ejr.item.ByTheCampireItem;
+import net.ejr.item.BuildingSmallTombItem;
+import net.ejr.item.BlackCopperSwordItem;
+import net.ejr.item.BlackCopperShovelItem;
+import net.ejr.item.BlackCopperShieldItem;
+import net.ejr.item.BlackCopperPickaxeItem;
+import net.ejr.item.BlackCopperHoeItem;
+import net.ejr.item.BlackCopperBowItem;
+import net.ejr.item.BlackCopperAxeItem;
+import net.ejr.item.BlackCopperArmorItem;
 import net.ejr.EjrMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -56,6 +73,26 @@ public class EjrModItems {
 	public static final RegistryObject<Item> STEEL_ARMOR_CHESTPLATE = REGISTRY.register("steel_armor_chestplate", () -> new SteelArmorItem.Chestplate());
 	public static final RegistryObject<Item> STEEL_ARMOR_LEGGINGS = REGISTRY.register("steel_armor_leggings", () -> new SteelArmorItem.Leggings());
 	public static final RegistryObject<Item> STEEL_ARMOR_BOOTS = REGISTRY.register("steel_armor_boots", () -> new SteelArmorItem.Boots());
+	public static final RegistryObject<Item> WAKE_UP = REGISTRY.register("wake_up", () -> new WakeUpItem());
+	public static final RegistryObject<Item> EPIC_JOURNEY = REGISTRY.register("epic_journey", () -> new EpicJourneyItem());
+	public static final RegistryObject<Item> JOURNEYS_BEGIN_DISC = REGISTRY.register("journeys_begin_disc", () -> new JourneysBeginDiscItem());
+	public static final RegistryObject<Item> IN_THE_JOURNEY = REGISTRY.register("in_the_journey", () -> new InTheJourneyItem());
+	public static final RegistryObject<Item> BY_THE_CAMPIRE = REGISTRY.register("by_the_campire", () -> new ByTheCampireItem());
+	public static final RegistryObject<Item> WOLF_KNIGHT_OF_THE_MOON_DISC = REGISTRY.register("wolf_knight_of_the_moon_disc", () -> new WolfKnightOfTheMoonDiscItem());
+	public static final RegistryObject<Item> THE_GOD_OF_FAKE = REGISTRY.register("the_god_of_fake", () -> new TheGodOfFakeItem());
+	public static final RegistryObject<Item> BLACK_COPPER_SWORD = REGISTRY.register("black_copper_sword", () -> new BlackCopperSwordItem());
+	public static final RegistryObject<Item> BLACK_COPPER_AXE = REGISTRY.register("black_copper_axe", () -> new BlackCopperAxeItem());
+	public static final RegistryObject<Item> BLACK_COPPER_PICKAXE = REGISTRY.register("black_copper_pickaxe", () -> new BlackCopperPickaxeItem());
+	public static final RegistryObject<Item> BLACK_COPPER_SHOVEL = REGISTRY.register("black_copper_shovel", () -> new BlackCopperShovelItem());
+	public static final RegistryObject<Item> BLACK_COPPER_HOE = REGISTRY.register("black_copper_hoe", () -> new BlackCopperHoeItem());
+	public static final RegistryObject<Item> BLACK_COPPER_BOW = REGISTRY.register("black_copper_bow", () -> new BlackCopperBowItem());
+	public static final RegistryObject<Item> BLACK_COPPER_SHIELD = REGISTRY.register("black_copper_shield", () -> new BlackCopperShieldItem());
+	public static final RegistryObject<Item> BLACK_COPPER_ARMOR_HELMET = REGISTRY.register("black_copper_armor_helmet", () -> new BlackCopperArmorItem.Helmet());
+	public static final RegistryObject<Item> BLACK_COPPER_ARMOR_CHESTPLATE = REGISTRY.register("black_copper_armor_chestplate", () -> new BlackCopperArmorItem.Chestplate());
+	public static final RegistryObject<Item> BLACK_COPPER_ARMOR_LEGGINGS = REGISTRY.register("black_copper_armor_leggings", () -> new BlackCopperArmorItem.Leggings());
+	public static final RegistryObject<Item> BLACK_COPPER_ARMOR_BOOTS = REGISTRY.register("black_copper_armor_boots", () -> new BlackCopperArmorItem.Boots());
+	public static final RegistryObject<Item> FINAL_MESSAGE = REGISTRY.register("final_message", () -> new FinalMessageItem());
+	public static final RegistryObject<Item> BUILDING_SMALL_TOMB = REGISTRY.register("building_small_tomb", () -> new BuildingSmallTombItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items
@@ -63,6 +100,7 @@ public class EjrModItems {
 	public static void clientLoad(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
 			ItemProperties.register(STEEL_SHIELD.get(), new ResourceLocation("blocking"), ItemProperties.getProperty(Items.SHIELD, new ResourceLocation("blocking")));
+			ItemProperties.register(BLACK_COPPER_SHIELD.get(), new ResourceLocation("blocking"), ItemProperties.getProperty(Items.SHIELD, new ResourceLocation("blocking")));
 		});
 	}
 }
