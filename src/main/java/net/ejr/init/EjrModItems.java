@@ -4,51 +4,20 @@
  */
 package net.ejr.init;
 
-import net.minecraftforge.registries.RegistryObject;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.common.ForgeSpawnEggItem;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.Item;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.item.ItemProperties;
-
-import net.ejr.item.WolfKnightOfTheMoonDiscItem;
-import net.ejr.item.WakeUpItem;
-import net.ejr.item.TheGodOfFakeItem;
-import net.ejr.item.SteelSwordItem;
-import net.ejr.item.SteelShovelItem;
-import net.ejr.item.SteelShieldItem;
-import net.ejr.item.SteelPickaxeItem;
-import net.ejr.item.SteelHoeItem;
-import net.ejr.item.SteelBowItem;
-import net.ejr.item.SteelAxeItem;
-import net.ejr.item.SteelArmorItem;
-import net.ejr.item.SilverCoinItem;
-import net.ejr.item.ScrollItem;
-import net.ejr.item.PurseItem;
-import net.ejr.item.JourneysBeginDiscItem;
-import net.ejr.item.InTheJourneyItem;
-import net.ejr.item.GoldCoinItem;
-import net.ejr.item.FinalMessageItem;
-import net.ejr.item.EpicJourneyItem;
-import net.ejr.item.CopperCoinItem;
-import net.ejr.item.ByTheCampireItem;
-import net.ejr.item.BuildingSmallTombItem;
-import net.ejr.item.BlackCopperSwordItem;
-import net.ejr.item.BlackCopperShovelItem;
-import net.ejr.item.BlackCopperShieldItem;
-import net.ejr.item.BlackCopperPickaxeItem;
-import net.ejr.item.BlackCopperHoeItem;
-import net.ejr.item.BlackCopperBowItem;
-import net.ejr.item.BlackCopperAxeItem;
-import net.ejr.item.BlackCopperArmorItem;
 import net.ejr.EjrMod;
+import net.ejr.item.*;
+import net.minecraft.client.renderer.item.ItemProperties;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.common.ForgeSpawnEggItem;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class EjrModItems {
@@ -91,11 +60,15 @@ public class EjrModItems {
 	public static final RegistryObject<Item> BLACK_COPPER_ARMOR_CHESTPLATE = REGISTRY.register("black_copper_armor_chestplate", () -> new BlackCopperArmorItem.Chestplate());
 	public static final RegistryObject<Item> BLACK_COPPER_ARMOR_LEGGINGS = REGISTRY.register("black_copper_armor_leggings", () -> new BlackCopperArmorItem.Leggings());
 	public static final RegistryObject<Item> BLACK_COPPER_ARMOR_BOOTS = REGISTRY.register("black_copper_armor_boots", () -> new BlackCopperArmorItem.Boots());
+	public static final RegistryObject<Item> SPORE_CLUSTER = REGISTRY.register("spore_cluster", () -> new SporeClusterItem());
+	public static final RegistryObject<Item> SPORE_BALL=REGISTRY.register("spore_ball",() ->new SporeBallItem());
+	public static final RegistryObject<Item> LIFE_CRYSTAL = REGISTRY.register("life_crystal", () -> new LifeCrystalItem());
+	public static final RegistryObject<Item> MISTLETOE = REGISTRY.register("mistletoe", () -> new MistletoeItem());
+	public static final RegistryObject<Item> DODDER = REGISTRY.register("dodder", () -> new DodderItem());
+
 	public static final RegistryObject<Item> FINAL_MESSAGE = REGISTRY.register("final_message", () -> new FinalMessageItem());
 	public static final RegistryObject<Item> BUILDING_SMALL_TOMB = REGISTRY.register("building_small_tomb", () -> new BuildingSmallTombItem());
 
-	// Start of user code block custom items
-	// End of user code block custom items
 	@SubscribeEvent
 	public static void clientLoad(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {

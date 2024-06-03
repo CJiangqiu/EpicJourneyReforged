@@ -1,18 +1,18 @@
 package net.ejr.item;
 
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.Item;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.crafting.Ingredient;
 
 public class BlackCopperSwordItem extends SwordItem {
 	public BlackCopperSwordItem() {
 		super(new Tier() {
 			public int getUses() {
-				return 450;
+				return 900;
 			}
 
 			public float getSpeed() {
@@ -24,7 +24,7 @@ public class BlackCopperSwordItem extends SwordItem {
 			}
 
 			public int getLevel() {
-				return 2;
+				return 3;
 			}
 
 			public int getEnchantmentValue() {

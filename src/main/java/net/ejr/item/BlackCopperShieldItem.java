@@ -1,13 +1,13 @@
 
 package net.ejr.item;
 
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.ShieldItem;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.ShieldItem;
+import net.minecraft.world.item.crafting.Ingredient;
 
 public class BlackCopperShieldItem extends ShieldItem {
 	public BlackCopperShieldItem() {

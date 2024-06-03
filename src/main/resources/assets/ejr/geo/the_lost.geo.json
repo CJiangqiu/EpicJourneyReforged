@@ -6,9 +6,9 @@
 				"identifier": "geometry.unknown",
 				"texture_width": 64,
 				"texture_height": 64,
-				"visible_bounds_width": 2,
-				"visible_bounds_height": 3.5,
-				"visible_bounds_offset": [0, 1.25, 0]
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
 			},
 			"bones": [
 				{
@@ -28,7 +28,7 @@
 					"parent": "TheLost",
 					"pivot": [0, 22, 0],
 					"cubes": [
-						{"origin": [-4, 12.00857, -2.39257], "size": [8, 11, 4], "pivot": [0, 22.00857, -0.39257], "rotation": [10, 0, 0], "uv": [0, 17]}
+						{"origin": [-4, 11.93261, -1.52433], "size": [8, 11, 4], "pivot": [0, 17.00857, -0.39257], "rotation": [10, 0, 0], "uv": [0, 17]}
 					]
 				},
 				{
@@ -36,7 +36,7 @@
 					"parent": "TheLost",
 					"pivot": [-4, 22, 0],
 					"cubes": [
-						{"origin": [-7, 11, -1], "size": [3, 12, 3], "uv": [0, 34]}
+						{"origin": [-7, 11, -2], "size": [3, 12, 3], "uv": [0, 34]}
 					]
 				},
 				{
@@ -44,7 +44,7 @@
 					"parent": "TheLost",
 					"pivot": [4, 22, 0],
 					"cubes": [
-						{"origin": [4.00381, 11, -1.17448], "size": [3, 12, 3], "uv": [22, 33]}
+						{"origin": [4.00381, 11, -2.17448], "size": [3, 12, 3], "uv": [22, 33]}
 					]
 				},
 				{

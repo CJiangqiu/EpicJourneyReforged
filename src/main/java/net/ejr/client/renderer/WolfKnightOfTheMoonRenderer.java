@@ -28,15 +28,15 @@ public class WolfKnightOfTheMoonRenderer extends GeoEntityRenderer<WolfKnightOfT
 		super(renderManager, new WolfKnightOfTheMoonModel());
 		this.shadowRadius = 0.5f;
 
-		//add hand item layer,code from azurelib
+		//add hand item layer
 		addRenderLayer(new BlockAndItemGeoLayer<>(this) {
 
 			@Nullable
 			@Override
 			protected ItemStack getStackForBone(GeoBone bone, WolfKnightOfTheMoonEntity animatable) {
 				return switch (bone.getName()) {
-					case "right_arm_0" -> animatable.getMainHandItem();
-					case "left_arm_0" -> animatable.getOffhandItem();
+					case "right_hand" -> animatable.getMainHandItem();
+					case "left_hand" -> animatable.getOffhandItem();
 					default -> null;
 				};
 			}
@@ -44,27 +44,35 @@ public class WolfKnightOfTheMoonRenderer extends GeoEntityRenderer<WolfKnightOfT
 			@Override
 			protected ItemDisplayContext getTransformTypeForStack(GeoBone bone, ItemStack stack, WolfKnightOfTheMoonEntity animatable) {
 				return switch (bone.getName()) {
-					case "left_arm_0" -> ItemDisplayContext.THIRD_PERSON_LEFT_HAND;
+					case "left_hand" -> ItemDisplayContext.THIRD_PERSON_LEFT_HAND;
 					default -> ItemDisplayContext.THIRD_PERSON_RIGHT_HAND;
 				};
 			}
 			@Override
 			protected void renderStackForBone(PoseStack poseStack, GeoBone bone, ItemStack stack, WolfKnightOfTheMoonEntity animatable, MultiBufferSource bufferSource, float partialTick, int packedLight, int packedOverlay) {
+				if (bone.getName().equals("left_hand") || bone.getName().equals("right_hand")) {
+					poseStack.mulPose(Axis.XP.rotationDegrees(-90f)); // Rotate the item -90 degrees around the X-axis
+					poseStack.translate(0, 0.2, -0.3); // Move the item 20 units outward along the Z-axis
+				}
 				poseStack.mulPose(Axis.XP.rotationDegrees(25f));
 				super.renderStackForBone(poseStack, bone, stack, animatable, bufferSource, partialTick, packedLight, packedOverlay);
 			}
+
+
+
 		});
 
-		//add armor layer,code from azurelib
+		//add armor layer
 		addRenderLayer(new ItemArmorGeoLayer<>(this) {
 			@Nullable
 			@Override
 			protected ItemStack getArmorItemForBone(GeoBone bone, WolfKnightOfTheMoonEntity animatable) {
 				// Return the items relevant to the bones being rendered for additional rendering
 				return switch (bone.getName()) {
-					case "left_leg_0", "right_leg_0" -> this.bootsStack;
-					case "torso" -> this.chestplateStack;
+					case "left_feet", "right_feet" -> this.bootsStack;
+					case "Body" -> this.chestplateStack;
 					case "Head" -> this.helmetStack;
+					case "right_leg", "left_leg" -> this.leggingsStack; // Add this line
 					default -> null;
 				};
 			}
@@ -73,11 +81,12 @@ public class WolfKnightOfTheMoonRenderer extends GeoEntityRenderer<WolfKnightOfT
 			@Override
 			protected EquipmentSlot getEquipmentSlotForBone(GeoBone bone, ItemStack stack, WolfKnightOfTheMoonEntity animatable) {
 				return switch (bone.getName()) {
-					case "left_leg_0", "right_leg_0" -> EquipmentSlot.FEET;
-					case "torso" -> EquipmentSlot.CHEST;
-					case "right_arm_0" -> !animatable.isLeftHanded() ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND;
-					case "left_arm_0" -> animatable.isLeftHanded() ? EquipmentSlot.OFFHAND : EquipmentSlot.MAINHAND;
+					case "left_feet", "right_feet" -> EquipmentSlot.FEET;
+					case "Body" -> EquipmentSlot.CHEST;
+					case "right_hand" -> !animatable.isLeftHanded() ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND;
+					case "left_hand" -> animatable.isLeftHanded() ? EquipmentSlot.OFFHAND : EquipmentSlot.MAINHAND;
 					case "Head" -> EquipmentSlot.HEAD;
+					case "right_leg", "left_leg" -> EquipmentSlot.LEGS;
 					default -> super.getEquipmentSlotForBone(bone, stack, animatable);
 				};
 			}
@@ -86,11 +95,11 @@ public class WolfKnightOfTheMoonRenderer extends GeoEntityRenderer<WolfKnightOfT
 			@Override
 			protected ModelPart getModelPartForBone(GeoBone bone, EquipmentSlot slot, ItemStack stack, WolfKnightOfTheMoonEntity animatable, HumanoidModel<?> baseModel) {
 				return switch (bone.getName()) {
-					case "left_leg" -> baseModel.leftLeg;
-					case "right_leg" -> baseModel.rightLeg;
-					case "right_arm" -> baseModel.rightArm;
-					case "left_arm" -> baseModel.leftArm;
-					case "torso" -> baseModel.body;
+					case "LeftLeg" -> baseModel.leftLeg;
+					case "RightLeg" -> baseModel.rightLeg;
+					case "RightArm" -> baseModel.rightArm;
+					case "LeftArm" -> baseModel.leftArm;
+					case "Body" -> baseModel.body;
 					case "Head"  -> baseModel.head;
 					default -> super.getModelPartForBone(bone, slot, stack, animatable, baseModel);
 				};

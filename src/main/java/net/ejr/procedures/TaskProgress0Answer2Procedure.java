@@ -1,21 +1,20 @@
 package net.ejr.procedures;
 
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.network.chat.Component;
-
-import net.ejr.network.EjrModVariables;
-import net.ejr.entity.TheAllKnowingSageEntity;
 import net.ejr.EjrMod;
+import net.ejr.entity.TheAllKnowingSageEntity;
+import net.ejr.network.EjrModVariables;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.phys.Vec3;
 
-import java.util.List;
 import java.util.Comparator;
+import java.util.List;
 
 public class TaskProgress0Answer2Procedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {

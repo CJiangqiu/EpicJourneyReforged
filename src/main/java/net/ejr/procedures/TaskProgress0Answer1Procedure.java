@@ -1,8 +1,7 @@
 package net.ejr.procedures;
 
-import net.minecraft.world.entity.Entity;
-
 import net.ejr.network.EjrModVariables;
+import net.minecraft.world.entity.Entity;
 
 public class TaskProgress0Answer1Procedure {
 	public static void execute(Entity entity) {

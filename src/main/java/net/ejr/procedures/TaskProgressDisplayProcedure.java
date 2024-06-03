@@ -1,9 +1,8 @@
 package net.ejr.procedures;
 
-import net.minecraft.world.entity.Entity;
-import net.minecraft.network.chat.Component;
-
 import net.ejr.network.EjrModVariables;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.Entity;
 
 public class TaskProgressDisplayProcedure {
 	public static String execute(Entity entity) {

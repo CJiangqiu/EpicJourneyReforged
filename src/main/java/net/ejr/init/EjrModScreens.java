@@ -1,19 +1,11 @@
 package net.ejr.init;
 
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.api.distmarker.Dist;
-
+import net.ejr.client.gui.*;
 import net.minecraft.client.gui.screens.MenuScreens;
-
-import net.ejr.client.gui.TalkingGuiScreen;
-import net.ejr.client.gui.ScrollGuiScreen;
-import net.ejr.client.gui.ScrollGui2Screen;
-import net.ejr.client.gui.ScrollGui1Screen;
-import net.ejr.client.gui.PurseGuiScreen;
-import net.ejr.client.gui.FinalMessageGui2Screen;
-import net.ejr.client.gui.FinalMessageGuiScreen;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class EjrModScreens {
 	@SubscribeEvent

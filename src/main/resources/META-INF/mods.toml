@@ -4,7 +4,7 @@ license="Custom license"
 
 [[mods]]
 modId="ejr"
-version="0.0.3"
+version="0.0.4-beta"
 displayName="Epic Journey:Reforged"
 displayURL="https://github.com/CJiangqiu/EpicJourneyReforged"
 logoFile="logo.png"
@@ -19,6 +19,12 @@ description="An epic journey in another world."
     side="BOTH"
 
 
+[[dependencies.ejr]]
+modId="epic_core_api"
+mandatory=true
+versionRange="[0,)"
+ordering="NONE"
+side="BOTH"
 [[dependencies.ejr]]
     modId="curios_api"
     mandatory=false
@@ -39,13 +45,13 @@ description="An epic journey in another world."
     side="BOTH"
 [[dependencies.ejr]]
     modId="geckolib"
-    mandatory=false
+    mandatory=true
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.ejr]]
     modId="playeranimator"
-    mandatory=false
+    mandatory=true
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"

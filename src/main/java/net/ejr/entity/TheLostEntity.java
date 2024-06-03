@@ -1,50 +1,43 @@
 
 package net.ejr.entity;
 
-import net.minecraft.core.BlockPos;
-import net.minecraft.util.RandomSource;
-import net.minecraft.world.DifficultyInstance;
-import net.minecraft.world.entity.*;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.phys.Vec3;
-import software.bernie.geckolib.util.GeckoLibUtil;
-import software.bernie.geckolib.core.object.PlayState;
-import software.bernie.geckolib.core.animation.RawAnimation;
-import software.bernie.geckolib.core.animation.AnimationState;
-import software.bernie.geckolib.core.animation.AnimationController;
-import software.bernie.geckolib.core.animation.AnimatableManager;
-import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.animatable.GeoEntity;
-
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
-
-import net.minecraft.world.level.levelgen.Heightmap;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
-import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.MoveBackToVillageGoal;
-import net.minecraft.world.entity.ai.goal.BreakDoorGoal;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.Difficulty;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.syncher.SynchedEntityData;
-import net.minecraft.network.syncher.EntityDataSerializers;
-import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.network.protocol.game.ClientGamePacketListener;
-import net.minecraft.network.protocol.Packet;
-import net.minecraft.nbt.CompoundTag;
-
-import net.ejr.init.EjrModItems;
 import net.ejr.init.EjrModEntities;
-import net.minecraft.world.entity.ai.goal.Goal;
+import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.Difficulty;
+import net.minecraft.world.DifficultyInstance;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.goal.*;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
+import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.phys.Vec3;
+import net.minecraftforge.network.NetworkHooks;
+import net.minecraftforge.network.PlayMessages;
+import net.minecraftforge.registries.ForgeRegistries;
+import software.bernie.geckolib.animatable.GeoEntity;
+import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.core.animation.AnimatableManager;
+import software.bernie.geckolib.core.animation.AnimationController;
+import software.bernie.geckolib.core.animation.AnimationState;
+import software.bernie.geckolib.core.animation.RawAnimation;
+import software.bernie.geckolib.core.object.PlayState;
+import software.bernie.geckolib.util.GeckoLibUtil;
+
 public class TheLostEntity extends Monster implements GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(TheLostEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(TheLostEntity.class, EntityDataSerializers.STRING);
@@ -68,6 +61,7 @@ public class TheLostEntity extends Monster implements GeoEntity {
 		this.entityData.set(DATA_texture, random.nextInt(2));
 		Vec3 pos = this.position();
 		populateDefaultEquipmentSlots(world.getCurrentDifficultyAt(new BlockPos((int)Math.floor(pos.x), (int)Math.floor(pos.y), (int)Math.floor(pos.z))), (RandomSource)world.random);
+
 	}
 
 	@Override
@@ -95,7 +89,12 @@ public class TheLostEntity extends Monster implements GeoEntity {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new CustomAttackGoal(this, 1.2));
+		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, true) {
+			@Override
+			protected double getAttackReachSqr(LivingEntity entity) {
+				return 4;
+			}
+		});
 		this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setAlertOthers());
 		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1));
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
@@ -103,65 +102,28 @@ public class TheLostEntity extends Monster implements GeoEntity {
 		this.goalSelector.addGoal(6, new MoveBackToVillageGoal(this, 0.6, false));
 	}
 
-	public class CustomAttackGoal extends Goal {
-		private final Monster monster;
-		private final double speedModifier;
-		private int attackTimer;
-
-		public CustomAttackGoal(Monster monster, double speedModifier) {
-			this.monster = monster;
-			this.speedModifier = speedModifier;
-		}
-
-		@Override
-		public boolean canUse() {
-			return this.monster.getTarget() != null;
-		}
-
-		@Override
-		public void start() {
-			this.attackTimer = 80;  // 4秒攻擊一次，每秒20刻
-		}
-
-		@Override
-		public void tick() {
-			LivingEntity target = this.monster.getTarget();
-			if (target != null) {
-				this.monster.getLookControl().setLookAt(target, 30.0F, 30.0F);
-				double d0 = this.monster.distanceToSqr(target.getX(), target.getY(), target.getZ());
-				if (--this.attackTimer <= 0 && d0 <= this.getAttackReachSqr(target)) {
-					this.attackTimer = 80;
-					this.monster.doHurtTarget(target);
-				} else if (d0 > this.getAttackReachSqr(target)) {
-					this.monster.getNavigation().moveTo(target, this.speedModifier);
-				}
-			}
-		}
-
-		protected double getAttackReachSqr(LivingEntity attackTarget) {
-			return (double)(this.monster.getBbWidth() * 2.0F * this.monster.getBbWidth() * 2.0F + attackTarget.getBbWidth());
-		}
-	}
 	@Override
 	public MobType getMobType() {
 		return MobType.UNDEFINED;
 	}
 
-	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
-		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(EjrModItems.COPPER_COIN.get()));
-	}
 
+	// 返回实体的环境声音
+	// Returns the ambient sound of the entity
 	@Override
 	public SoundEvent getAmbientSound() {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ejr:the_lost_live"));
 	}
 
+	// 返回实体受伤时的声音
+	// Returns the sound of the entity when it gets hurt
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ejr:the_lost_hurt"));
 	}
 
+	// 返回实体死亡时的声音
+	// Returns the sound of the entity when it dies
 	@Override
 	public SoundEvent getDeathSound() {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ejr:the_lost_death"));
@@ -278,29 +240,27 @@ public class TheLostEntity extends Monster implements GeoEntity {
 		data.add(new AnimationController<>(this, "attacking", 4, this::attackingPredicate));
 		data.add(new AnimationController<>(this, "procedure", 4, this::procedurePredicate));
 	}
-
 	@Override
 	public AnimatableInstanceCache getAnimatableInstanceCache() {
 		return this.cache;
 	}
 
-
 	protected void populateDefaultEquipmentSlots(DifficultyInstance difficulty, RandomSource rand) {
 		super.populateDefaultEquipmentSlots(rand,difficulty);
-
 
 
 		if (Math.random() < 0.3) {
 			this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Items.LEATHER_BOOTS));
 		}
 
-		if (Math.random() < 0.3) {
+		if (Math.random() < 0.1) {
 			this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Items.LEATHER_LEGGINGS));
 		}
 
-		if (Math.random() < 0.3) {
+		if (Math.random() < 0.1) {
 			this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Items.LEATHER_CHESTPLATE));
 		}
 	}
+
 
 }

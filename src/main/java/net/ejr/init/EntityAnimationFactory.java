@@ -1,12 +1,11 @@
 package net.ejr.init;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.living.LivingEvent;
-
-import net.ejr.entity.WolfKnightOfTheMoonEntity;
-import net.ejr.entity.TheLostEntity;
 import net.ejr.entity.TheAllKnowingSageEntity;
+import net.ejr.entity.TheLostEntity;
+import net.ejr.entity.WolfKnightOfTheMoonEntity;
+import net.minecraftforge.event.entity.living.LivingEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber
 public class EntityAnimationFactory {

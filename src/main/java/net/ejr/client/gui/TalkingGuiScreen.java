@@ -1,34 +1,22 @@
 package net.ejr.client.gui;
 
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.client.gui.screens.inventory.InventoryScreen;
-import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.components.Button;
-import net.minecraft.client.gui.GuiGraphics;
-
-import net.ejr.world.inventory.TalkingGuiMenu;
-import net.ejr.procedures.TaskProgress0TalkingShowProcedure;
-import net.ejr.procedures.TaskProgress0TalkingProcedure;
-import net.ejr.procedures.TaskProgress0Talking2ShowProcedure;
-import net.ejr.procedures.TaskProgress0Talking2Procedure;
-import net.ejr.procedures.TaskProgress0Talking20Procedure;
-import net.ejr.procedures.TaskProgress0Talking1ShowProcedure;
-import net.ejr.procedures.TaskProgress0Talking1Procedure;
-import net.ejr.procedures.TaskProgress0Talking10Procedure;
-import net.ejr.procedures.TaskProgress0Talking0ShowProcedure;
-import net.ejr.procedures.TaskProgress0Talking0Procedure;
-import net.ejr.procedures.GetTalkingNpcModelProcedure;
-import net.ejr.network.TalkingGuiButtonMessage;
+import com.mojang.blaze3d.systems.RenderSystem;
 import net.ejr.EjrMod;
+import net.ejr.network.TalkingGuiButtonMessage;
+import net.ejr.procedures.*;
+import net.ejr.world.inventory.TalkingGuiMenu;
+import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.screens.inventory.InventoryScreen;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
 
 import java.util.HashMap;
-
-import com.mojang.blaze3d.systems.RenderSystem;
 
 public class TalkingGuiScreen extends AbstractContainerScreen<TalkingGuiMenu> {
 	private final static HashMap<String, Object> guistate = TalkingGuiMenu.guistate;

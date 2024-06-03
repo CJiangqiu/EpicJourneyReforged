@@ -1,12 +1,12 @@
 package net.ejr.item;
 
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.AxeItem;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.AxeItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.crafting.Ingredient;
 
 public class BlackCopperAxeItem extends AxeItem {
 	public BlackCopperAxeItem() {
@@ -21,7 +21,7 @@ public class BlackCopperAxeItem extends AxeItem {
 				return 7f;
 			}
 			public int getLevel() {
-				return 2;
+				return 3;
 			}
 			public int getEnchantmentValue() {
 				return 15;

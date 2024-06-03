@@ -1,22 +1,21 @@
 package net.ejr.client.gui;
 
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.components.ImageButton;
-import net.minecraft.client.gui.GuiGraphics;
-
-import net.ejr.world.inventory.ScrollGuiMenu;
-import net.ejr.procedures.TaskProgressDisplayProcedure;
-import net.ejr.network.ScrollGuiButtonMessage;
+import com.mojang.blaze3d.systems.RenderSystem;
 import net.ejr.EjrMod;
+import net.ejr.network.ScrollGuiButtonMessage;
+import net.ejr.procedures.TaskLocationFindProcedure;
+import net.ejr.procedures.TaskProgressDisplayProcedure;
+import net.ejr.world.inventory.ScrollGuiMenu;
+import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.components.ImageButton;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
 
 import java.util.HashMap;
-
-import com.mojang.blaze3d.systems.RenderSystem;
 
 public class ScrollGuiScreen extends AbstractContainerScreen<ScrollGuiMenu> {
 	private final static HashMap<String, Object> guistate = ScrollGuiMenu.guistate;
@@ -75,12 +74,17 @@ public class ScrollGuiScreen extends AbstractContainerScreen<ScrollGuiMenu> {
 		super.containerTick();
 	}
 
+
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font,
 
-				TaskProgressDisplayProcedure.execute(entity), 164, 184, -12829636, false);
+				TaskProgressDisplayProcedure.execute(entity), 92, 184, -12829636, false);
+		guiGraphics.drawString(this.font,
+
+				TaskLocationFindProcedure.execute(entity), 227, 184, -12829636, false);
 	}
+
 
 	@Override
 	public void init() {

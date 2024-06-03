@@ -1,19 +1,19 @@
 
 package net.ejr.item;
 
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.HoeItem;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.HoeItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.crafting.Ingredient;
 
 public class BlackCopperHoeItem extends HoeItem {
 	public BlackCopperHoeItem() {
 		super(new Tier() {
 			public int getUses() {
-				return 450;
+				return 900;
 			}
 			public float getSpeed() {
 				return 6f;
@@ -22,7 +22,7 @@ public class BlackCopperHoeItem extends HoeItem {
 				return 0f;
 			}
 			public int getLevel() {
-				return 2;
+				return 3;
 			}
 			public int getEnchantmentValue() {
 				return 15;

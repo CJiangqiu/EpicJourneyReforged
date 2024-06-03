@@ -1,26 +1,21 @@
 
-/*
- *    MCreator note: This file will be REGENERATED on each build.
- */
 package net.ejr.init;
 
-import net.minecraftforge.registries.RegistryObject;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
-
-import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Entity;
-
-import net.ejr.entity.WolfKnightOfTheMoonEntity;
-import net.ejr.entity.TheLostEntity;
-import net.ejr.entity.TheAllKnowingSageEntity;
-import net.ejr.entity.DeadImperialSoldierEntity;
 import net.ejr.EjrMod;
+import net.ejr.entity.DeadImperialSoldierEntity;
+import net.ejr.entity.TheAllKnowingSageEntity;
+import net.ejr.entity.TheLostEntity;
+import net.ejr.entity.WolfKnightOfTheMoonEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobCategory;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class EjrModEntities {

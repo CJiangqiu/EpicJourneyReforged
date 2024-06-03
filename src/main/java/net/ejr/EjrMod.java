@@ -40,12 +40,15 @@ public class EjrMod {
 		EjrModItems.REGISTRY.register(bus);
 		EjrModEntities.REGISTRY.register(bus);
 
+		EjrModMobEffects.REGISTRY.register(bus);
+
 		EjrModTabs.REGISTRY.register(bus);
 
 		EjrModMenus.REGISTRY.register(bus);
 
 		bus.addListener(this::doClientStuff);
 	}
+
 
 
 	private static final String PROTOCOL_VERSION = "1";

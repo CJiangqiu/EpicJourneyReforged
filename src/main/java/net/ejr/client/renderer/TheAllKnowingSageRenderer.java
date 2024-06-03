@@ -1,19 +1,16 @@
 
 package net.ejr.client.renderer;
 
-import software.bernie.geckolib.renderer.GeoEntityRenderer;
-import software.bernie.geckolib.cache.object.BakedGeoModel;
-
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.MultiBufferSource;
-
-import net.ejr.entity.model.TheAllKnowingSageModel;
-import net.ejr.entity.TheAllKnowingSageEntity;
-
-import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.VertexConsumer;
+import net.ejr.entity.TheAllKnowingSageEntity;
+import net.ejr.entity.model.TheAllKnowingSageModel;
+import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.resources.ResourceLocation;
+import software.bernie.geckolib.cache.object.BakedGeoModel;
+import software.bernie.geckolib.renderer.GeoEntityRenderer;
 
 public class TheAllKnowingSageRenderer extends GeoEntityRenderer<TheAllKnowingSageEntity> {
 	public TheAllKnowingSageRenderer(EntityRendererProvider.Context renderManager) {

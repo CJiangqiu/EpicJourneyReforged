@@ -1,12 +1,11 @@
 
 package net.ejr.item;
 
-import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.InteractionResult;
-
 import net.ejr.procedures.SpawnSmallTombProcedure;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.context.UseOnContext;
 
 public class BuildingSmallTombItem extends Item {
 	public BuildingSmallTombItem() {

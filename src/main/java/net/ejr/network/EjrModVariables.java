@@ -77,6 +77,9 @@ public class EjrModVariables {
 			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			clone.TaskProgress = original.TaskProgress;
+			clone.TaskProgressLocationX = original.TaskProgressLocationX;
+			clone.TaskProgressLocationY = original.TaskProgressLocationY;
+			clone.TaskProgressLocationZ = original.TaskProgressLocationZ;
 			if (!event.isWasDeath()) {
 			}
 			if (!event.getEntity().level().isClientSide()) {
@@ -119,6 +122,9 @@ public class EjrModVariables {
 
 	public static class PlayerVariables {
 		public double TaskProgress = 0.0;
+		public double TaskProgressLocationX = 0;
+		public double TaskProgressLocationY = 0;
+		public double TaskProgressLocationZ = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -128,12 +134,18 @@ public class EjrModVariables {
 		public Tag writeNBT() {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putDouble("TaskProgress", TaskProgress);
+			nbt.putDouble("TaskProgressLocationX", TaskProgressLocationX);
+			nbt.putDouble("TaskProgressLocationY", TaskProgressLocationY);
+			nbt.putDouble("TaskProgressLocationZ", TaskProgressLocationZ);
 			return nbt;
 		}
 
 		public void readNBT(Tag Tag) {
 			CompoundTag nbt = (CompoundTag) Tag;
 			TaskProgress = nbt.getDouble("TaskProgress");
+			TaskProgressLocationX = nbt.getDouble("TaskProgressLocationX");
+			TaskProgressLocationY = nbt.getDouble("TaskProgressLocationY");
+			TaskProgressLocationZ = nbt.getDouble("TaskProgressLocationZ");
 		}
 	}
 
@@ -168,6 +180,9 @@ public class EjrModVariables {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.level().getEntity(message.target).getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 					variables.TaskProgress = message.data.TaskProgress;
+					variables.TaskProgressLocationX = message.data.TaskProgressLocationX;
+					variables.TaskProgressLocationY = message.data.TaskProgressLocationY;
+					variables.TaskProgressLocationZ = message.data.TaskProgressLocationZ;
 				}
 			});
 			context.setPacketHandled(true);

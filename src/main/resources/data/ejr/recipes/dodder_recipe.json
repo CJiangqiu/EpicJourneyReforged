@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " ab",
+    "c b",
+    " ab"
+  ],
+  "key": {
+    "a": {
+      "item": "ejr:spore_ball"
+    },
+    "b": {
+      "item": "minecraft:string"
+    },
+    "c": {
+      "item": "ejr:life_crystal"
+    }
+  },
+  "result": {
+    "item": "ejr:dodder",
+    "count": 1
+  }
+}
