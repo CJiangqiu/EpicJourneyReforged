@@ -60,7 +60,7 @@ public class TheLostEntity extends Monster implements GeoEntity {
 		setMaxUpStep(0.6f);
 		this.entityData.set(DATA_texture, random.nextInt(2));
 		Vec3 pos = this.position();
-		populateDefaultEquipmentSlots(world.getCurrentDifficultyAt(new BlockPos((int)Math.floor(pos.x), (int)Math.floor(pos.y), (int)Math.floor(pos.z))), (RandomSource)world.random);
+		populateDefaultEquipmentSlots(world.getCurrentDifficultyAt(new BlockPos((int)Math.floor(pos.x), (int)Math.floor(pos.y), (int)Math.floor(pos.z))), world.random);
 
 	}
 

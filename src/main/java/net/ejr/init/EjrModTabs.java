@@ -78,7 +78,7 @@ public class EjrModTabs {
 				tabData.accept(EjrModItems.THE_ALL_KNOWING_SAGE_SPAWN_EGG.get());
 				tabData.accept(EjrModItems.DEAD_IMPERIAL_SOLDIER_SPAWN_EGG.get());
 				tabData.accept(EjrModItems.THE_LOST_SPAWN_EGG.get());
-				//tabData.accept(EjrModItems.WOLF_KNIGHT_OF_THE_MOON_SPAWN_EGG.get());
+				tabData.accept(EjrModItems.WOLF_KNIGHT_OF_THE_MOON_SPAWN_EGG.get());
 				tabData.accept(EjrModItems.EPIC_JOURNEY.get());
 				tabData.accept(EjrModItems.WAKE_UP.get());
 				tabData.accept(EjrModItems.JOURNEYS_BEGIN_DISC.get());

@@ -26,12 +26,12 @@ public class FinalMessageGuiMenu extends AbstractContainerMenu implements Suppli
 	public final Player entity;
 	public int x, y, z;
 	private ContainerLevelAccess access = ContainerLevelAccess.NULL;
-	private IItemHandler internal;
+	private final IItemHandler internal;
 	private final Map<Integer, Slot> customSlots = new HashMap<>();
-	private boolean bound = false;
-	private Supplier<Boolean> boundItemMatcher = null;
-	private Entity boundEntity = null;
-	private BlockEntity boundBlockEntity = null;
+	private final boolean bound = false;
+	private final Supplier<Boolean> boundItemMatcher = null;
+	private final Entity boundEntity = null;
+	private final BlockEntity boundBlockEntity = null;
 
 	public FinalMessageGuiMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
 		super(EjrModMenus.FINAL_MESSAGE_GUI.get(), id);

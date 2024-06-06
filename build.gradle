@@ -99,7 +99,6 @@ dependencies {
     implementation fg.deobf("curse.maven:curios-309927:5367944")
     implementation fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:1.0.2-rc1+1.20")
     implementation fg.deobf("curse.maven:epic-core-api-977556:5391523")
-
     compileOnly(fg.deobf("mezz.jei:jei-1.20.1-common-api:15.2.0.27"))
     compileOnly(fg.deobf("mezz.jei:jei-1.20.1-forge-api:15.2.0.27"))
     runtimeOnly(fg.deobf("mezz.jei:jei-1.20.1-forge:15.2.0.27"))

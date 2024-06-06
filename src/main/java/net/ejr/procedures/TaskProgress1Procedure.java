@@ -63,7 +63,6 @@ public class TaskProgress1Procedure {
                             capability.TaskProgressLocationZ = finalPos.getZ();
                             capability.syncPlayerVariables(entity);
                         });
-;
                     }
                 }
                 {

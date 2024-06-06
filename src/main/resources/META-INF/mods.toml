@@ -21,7 +21,7 @@ description="An epic journey in another world."
 
 [[dependencies.ejr]]
 modId="epic_core_api"
-mandatory=true
+mandatory=false
 versionRange="[0,)"
 ordering="NONE"
 side="BOTH"
@@ -45,13 +45,13 @@ side="BOTH"
     side="BOTH"
 [[dependencies.ejr]]
     modId="geckolib"
-    mandatory=true
+    mandatory=false
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.ejr]]
     modId="playeranimator"
-    mandatory=true
+    mandatory=false
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"

@@ -54,7 +54,7 @@ public class TalkingGuiScreen extends AbstractContainerScreen<TalkingGuiMenu> {
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("ejr:textures/screens/talking_gui.png"), this.leftPos + 0, this.topPos + 121, 0, 0, 425, 120, 425, 120);
+		guiGraphics.blit(new ResourceLocation("ejr:textures/screens/talking_gui.png"), this.leftPos, this.topPos + 121, 0, 0, 425, 120, 425, 120);
 
 		RenderSystem.disableBlend();
 	}

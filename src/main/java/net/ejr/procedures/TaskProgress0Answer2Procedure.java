@@ -37,7 +37,7 @@ public class TaskProgress0Answer2Procedure {
 							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 80, 1));
 							if (entity instanceof Player _player && !_player.level().isClientSide())
-								_player.displayClientMessage(Component.literal(((entityiterator.getDisplayName().getString() + ":") + "" + Component.translatable("task_progress.0.3").getString())), false);
+								_player.displayClientMessage(Component.literal(((entityiterator.getDisplayName().getString() + ":") + Component.translatable("task_progress.0.3").getString())), false);
 							EjrMod.queueServerWork(60, () -> {
 								if (entityiterator instanceof LivingEntity _entity)
 									_entity.setHealth(0);

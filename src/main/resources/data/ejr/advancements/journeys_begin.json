@@ -1,6 +1,5 @@
 {
   "display": {
-    "background": "ejr:textures/screens/scroll_gui.png",
     "icon": {
       "item": "ejr:scroll"
     },

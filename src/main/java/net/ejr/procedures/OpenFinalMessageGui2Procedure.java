@@ -21,7 +21,7 @@ public class OpenFinalMessageGui2Procedure {
             return;
         if (entity instanceof ServerPlayer _ent) {
             BlockPos _bpos = BlockPos.containing(x, y, z);
-            NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+            NetworkHooks.openScreen(_ent, new MenuProvider() {
                 @Override
                 public Component getDisplayName() {
                     return Component.literal("FinalMessage2");
